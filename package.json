@@ -1,0 +1,19 @@
+{
+  "name": "plumbing-shop",
+  "version": "1.0.0",
+  "description": "online store for trade in sanitary war",
+
+  "scripts": {
+    "start": "parcel docs/index.html",
+    "build": "parcel build docs/index.html"
+  },
+  "keywords": ["online store", "sanitary ware", "plumbing"],
+  "author": "Anastasia Slipchenko <slipchenko.as@gmail.com>",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
