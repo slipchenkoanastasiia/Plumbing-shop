@@ -1,0 +1,10 @@
+ /* Загальні стилі */
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-graphite: #212529;
+    --light-gray: #F8F9FA;
+    --medium-gray: #DEE2E6;
+    --accent-blue: #007BFF;
+  }

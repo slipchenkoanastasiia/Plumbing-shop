@@ -1,0 +1,1 @@
+{"mappings":"AAEA","sources":["docs/css/styles.css"],"sourcesContent":[" /* Загальні стилі */\n\n:root {\n    --white: #FFFFFF;\n    --black: #000000;\n    --dark-graphite: #212529;\n    --light-gray: #F8F9FA;\n    --medium-gray: #DEE2E6;\n    --accent-blue: #007BFF;\n  }"],"names":[],"version":3,"file":"index.8e376639.css.map","sourceRoot":"/__parcel_source_root/"}
