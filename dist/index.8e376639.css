@@ -190,14 +190,71 @@ header.scrolled .icon:hover svg {
 }
 
 .slider-container {
-  width: 300%;
-  animation: 9s linear infinite slide;
+  width: 100%;
   display: flex;
+  position: relative;
 }
 
 .slide {
+  opacity: 0;
+  flex: 0 0 100%;
   width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+}
+
+.slide:first-child {
+  opacity: 1;
   position: relative;
+}
+
+@keyframes slide1 {
+  0%, 33% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  34% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes slide2 {
+  33%, 66% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  67% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes slide3 {
+  66%, 100% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.slide:first-child {
+  animation: 15s infinite slide1;
+}
+
+.slide:nth-child(2) {
+  animation: 15s infinite slide2;
+}
+
+.slide:nth-child(3) {
+  animation: 15s infinite slide3;
 }
 
 .slide img {
@@ -224,7 +281,6 @@ header.scrolled .icon:hover svg {
   font-size: 85px;
   font-weight: 800;
   line-height: 1.5;
-  text-decoration: none;
 }
 
 .text-overlay p {
@@ -235,6 +291,70 @@ header.scrolled .icon:hover svg {
   font-size: 25px;
   font-weight: 200;
   line-height: 1.5;
-  text-decoration: none;
+}
+
+.fixed-vertical-button {
+  transform-origin: 0 0;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--main-font);
+  cursor: pointer;
+  z-index: 1000;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: 800;
+  position: fixed;
+  top: 55vh;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.card-section {
+  margin: 50px 0;
+}
+
+.section-title {
+  font-family: var(--main-font);
+  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card-container {
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+}
+
+.card {
+  text-align: center;
+  width: 23%;
+  position: relative;
+}
+
+.card-title {
+  font-family: var(--main-font);
+  color: #fff;
+  background-color: #00000080;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.card-img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=index.8e376639.css.map */
