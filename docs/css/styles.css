@@ -394,8 +394,110 @@ header {
 .logo-img {
   width: 150px;
   position: relative;
+  opacity: 0.5; 
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Секція новинок */
+
+.new-products {
+  padding: 50px 60px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 80%;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-card {
+  min-width: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: 500px; 
+}
+
+.product-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
 
+.product-info {
+  padding: 20px;
+  text-align: left;
+}
 
+.product-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
+.details-btn {
+  background-color: var(--medium-gray);
+  color: var(--black);
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.details-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.slider-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.slider-btn svg {
+  fill: var(--black);
+  transition: fill 0.3s ease-in-out;
+}
+
+.slider-btn:hover svg {
+  fill: var(--medium-gray);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
