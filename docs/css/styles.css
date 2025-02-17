@@ -408,7 +408,7 @@ header {
 /* Секція новинок */
 
 .new-products {
-  padding: 50px 60px;
+  padding: 30px 60px;
   background-color: var(--white);
   text-align: center;
 }
@@ -416,7 +416,6 @@ header {
 .section-title {
   font-size: 28px;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .slider {
@@ -430,7 +429,7 @@ header {
 
 .slider-wrapper {
   overflow: hidden;
-  width: 80%;
+  width: 90%;
 }
 
 .slider-track {
@@ -439,13 +438,21 @@ header {
 }
 
 .product-card {
+  position: relative; 
   min-width: 100%;
-  background-color: var(--white);
+  background-color: var(--black); 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  height: 500px; 
+  height: 500px;
+}
+
+.product-img,
+.product-info,
+.button-container {
+  position: relative;
+  z-index: 2; 
 }
 
 .product-img {
@@ -454,26 +461,47 @@ header {
   object-fit: cover;
 }
 
-
 .product-info {
   padding: 20px;
-  text-align: left;
-}
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}  
 
 .product-title {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 10px;
+  color: var(--white);
+}
+
+.product-price {
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+}
+
+.button-container {
+  display: flex;  
 }
 
 .details-btn {
+  margin-left: auto; 
   background-color: var(--medium-gray);
   color: var(--black);
   border: none;
+  border-radius: 5px;
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: 22px;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+  margin-top: 80px;
 }
 
 .details-btn:hover {
@@ -507,4 +535,69 @@ header {
 
 .next {
   right: 0;
+}
+
+/* Секція переваги */
+
+.advantages-section-new {
+  margin: 80px 0px; 
+  margin-bottom: 110px;
+}
+
+.section-p-new {
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.section-title-new {
+  font-family: var(--main-font);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color); 
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 60px;
+  width: 400px;
+}
+
+.card-container-new {
+  display: flex;
+  justify-content: flex-start; 
+  gap: 20px;
+  padding: 0 40px; 
+  margin-top: 40px;
+}
+
+.card-new {
+  width: calc(25% - 5px);
+  text-align: center;
+  padding: 40px;
+  background-color: var(--white); 
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  aspect-ratio: 3 / 4.5; 
+}
+
+.card-title-new {
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--black);
+  transition: color 0.3s ease-in-out;
+}
+
+.card-new:hover {
+  background-color: var(--black); 
+}
+
+.card-new:hover .card-title-new {
+  color: var(--white); 
 }
