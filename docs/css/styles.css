@@ -548,6 +548,9 @@ header {
 .advantages-section-new {
   margin: 80px 0px; 
   margin-bottom: 110px;
+  background-color: var(--light-gray);
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .section-p-new {
@@ -616,12 +619,12 @@ header {
   text-align: center;
 }
 
-.section-title {
+.special-section-title {
   font-size: 28px;
   font-weight: 800;
 }
 
-.slider {
+.special-slider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -630,17 +633,17 @@ header {
   margin: 0 auto;
 }
 
-.slider-wrapper {
+.special-slider-wrapper {
   overflow: hidden;
   width: 90%;
 }
 
-.slider-track {
+.special-slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.product-card {
+.special-product-card {
   position: relative;
   min-width: 100%;
   border-radius: 10px;
@@ -650,13 +653,13 @@ header {
   height: 500px;
 }
 
-.product-img {
+.special-product-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.product-info {
+.special-product-info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -666,34 +669,34 @@ header {
   color: var(--white);
   padding: 30px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: flex-start;
   transition: background-color 0.3s ease-in-out;
 }
 
-.product-card:hover .product-info {
+.special-product-card:hover .special-product-info {
   background-color: transparent;
-  color: var(--black); 
+  color: var(--black);
 }
 
-.product-title {
+.special-product-title {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 10px;
   color: var(--white);
 }
 
-.product-price {
+.special-product-price {
   font-family: var(--accent-font);
   text-decoration: none;
   color: var(--white);
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.5; 
+  line-height: 1.5;
   letter-spacing: 0.2px;
 }
 
-.button-container {
+.special-button-container {
   display: flex;
   position: absolute;
   bottom: 20px;
@@ -701,7 +704,7 @@ header {
   z-index: 2;
 }
 
-.details-btn {
+.special-details-btn {
   background-color: var(--black);
   color: var(--white);
   border: none;
@@ -713,12 +716,12 @@ header {
   transition: all 0.3s ease-in-out;
 }
 
-.details-btn:hover {
+.special-details-btn:hover {
   background-color: var(--black);
   color: var(--white);
 }
 
-.slider-btn {
+.special-slider-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -729,19 +732,120 @@ header {
   height: 40px;
 }
 
-.slider-btn svg {
+.special-slider-btn svg {
   fill: var(--black);
   transition: fill 0.3s ease-in-out;
 }
 
-.slider-btn:hover svg {
+.special-slider-btn:hover svg {
   fill: var(--medium-gray);
 }
 
-.prev {
+.special-prev {
   left: 0;
 }
 
-.next {
+.special-next {
   right: 0;
+}
+
+/* Секція відгуків */
+.reviews-section {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: var(--light-gray);
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  margin-top: 60px;
+  cursor: pointer; 
+}
+
+.reviews-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  word-wrap: break-word; 
+  padding: 0 20px;
+  width: 300px;
+}
+
+.main-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.review-card {
+  width: 230px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  opacity: 1; 
+  transform: rotate(10deg); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.top-left { 
+  top: 10%;
+  left: 15%;
+  transform: rotate(10deg);
+}
+.top-right { 
+  top: 10%;
+  right: 15%;
+  transform: rotate(-10deg);
+}
+.bottom-left { 
+  bottom: 10%;
+  left: 15%;
+  transform: rotate(-10deg);
+}
+.bottom-right { 
+  bottom: 10%;
+  right: 15%;
+  transform: rotate(10deg);
+}
+
+.reviews-section:hover .review-card {
+  animation: shake 0.8s infinite alternate; 
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(10deg) translateX(0) translateY(0); 
+  }
+  25% {
+    transform: rotate(10deg) translateX(-2px) translateY(1px); 
+  }
+  50% {
+    transform: rotate(10deg) translateX(2px) translateY(-1px); 
+  }
+  75% {
+    transform: rotate(10deg) translateX(-1px) translateY(1px); 
+  }
+  100% {
+    transform: rotate(10deg) translateX(0) translateY(0); 
+  }
+}
+
+.review-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #555;
 }
