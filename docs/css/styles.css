@@ -359,7 +359,7 @@ header {
   bottom: -100%;
   width: 100%;
   height: 100%;
-  background-color: var(--black); 
+  background-color: rgba(0, 0, 0, 0.3);
   transition: bottom 0.3s ease-in-out;
   z-index: 1;
 }
@@ -380,29 +380,42 @@ header {
 
 .product-brands {
   margin-bottom: 60px;
+  overflow: hidden; 
 }
 
 .product-logos {
   background-color: var(--white);
-  padding: 0px 0px; 
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .logos-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 30px;
-  width: 80%;
-  max-width: 1200px;
+  animation: scroll 20s linear infinite;
 }
 
 .logo-img {
   width: 150px;
-  position: relative;
   opacity: 0.5; 
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Секція новинок */
@@ -758,7 +771,6 @@ header {
   height: 600px;
   overflow: hidden;
   margin-top: 60px;
-  cursor: pointer; 
 }
 
 .reviews-wrapper {
@@ -773,7 +785,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   padding: 0 20px;
   width: 300px;
 }
@@ -791,51 +803,50 @@ header {
   background-color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   position: absolute;
-  opacity: 1; 
-  transform: rotate(10deg); 
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  transform: rotate(var(--rotation));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .top-left { 
   top: 10%;
   left: 15%;
-  transform: rotate(10deg);
+  --rotation: 10deg;
 }
 .top-right { 
   top: 10%;
   right: 15%;
-  transform: rotate(-10deg);
+  --rotation: -10deg;
 }
 .bottom-left { 
   bottom: 10%;
   left: 15%;
-  transform: rotate(-10deg);
+  --rotation: -10deg;
 }
 .bottom-right { 
   bottom: 10%;
   right: 15%;
-  transform: rotate(10deg);
+  --rotation: 10deg;
 }
 
 .reviews-section:hover .review-card {
-  animation: shake 0.8s infinite alternate; 
+  animation: shake 0.8s infinite alternate ease-in-out;
 }
 
 @keyframes shake {
   0% {
-    transform: rotate(10deg) translateX(0) translateY(0); 
+    transform: rotate(var(--rotation)) translate(0, 0);
   }
   25% {
-    transform: rotate(10deg) translateX(-2px) translateY(1px); 
+    transform: rotate(var(--rotation)) translate(-3px, 2px);
   }
   50% {
-    transform: rotate(10deg) translateX(2px) translateY(-1px); 
+    transform: rotate(var(--rotation)) translate(3px, -2px);
   }
   75% {
-    transform: rotate(10deg) translateX(-1px) translateY(1px); 
+    transform: rotate(var(--rotation)) translate(-2px, 1px);
   }
   100% {
-    transform: rotate(10deg) translateX(0) translateY(0); 
+    transform: rotate(var(--rotation)) translate(0, 0);
   }
 }
 
@@ -849,3 +860,112 @@ header {
   font-weight: bold;
   color: #555;
 }
+
+/* Стилі для футера */
+.footer {
+  background-color: var(--black); 
+  color: var(--white);          
+  padding: 100px 80px;
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Ліва частина */
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-address {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-socials .social-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+.footer-socials svg {
+  fill: white;
+}
+
+
+/* Центр */
+.footer-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-menu a:hover {
+  color: #f39c12;
+}
+
+/* Права частина */
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-desc {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--white);
+  color: #000;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.footer-cta:hover {
+  background-color: var(--light-gray);
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    margin-bottom: 20px;
+  }
+}
+

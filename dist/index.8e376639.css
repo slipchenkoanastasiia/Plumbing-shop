@@ -350,8 +350,8 @@ header {
 
 .card:before {
   content: "";
-  background-color: var(--black);
   z-index: 1;
+  background-color: #0000004d;
   width: 100%;
   height: 100%;
   transition: bottom .3s ease-in-out;
@@ -374,21 +374,21 @@ header {
 
 .product-brands {
   margin-bottom: 60px;
+  overflow: hidden;
 }
 
 .product-logos {
   background-color: var(--white);
+  white-space: nowrap;
   justify-content: center;
-  padding: 0;
+  align-items: center;
   display: flex;
+  overflow: hidden;
 }
 
 .logos-container {
-  justify-content: space-between;
-  align-items: center;
   gap: 30px;
-  width: 80%;
-  max-width: 1200px;
+  animation: 20s linear infinite scroll;
   display: flex;
 }
 
@@ -396,7 +396,21 @@ header {
   opacity: .5;
   background-color: #ffffff4d;
   width: 150px;
-  position: relative;
+}
+
+.logo-img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .new-products {
@@ -740,7 +754,6 @@ header {
 .reviews-section {
   text-align: center;
   background-color: var(--light-gray);
-  cursor: pointer;
   height: 600px;
   margin-top: 60px;
   padding: 100px 20px;
@@ -772,64 +785,63 @@ header {
 }
 
 .review-card {
-  opacity: 1;
+  width: 230px;
+  transform: rotate(var(--rotation));
   background-color: #fff;
   border-radius: 5px;
-  width: 230px;
   padding: 20px;
-  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: transform .3s, box-shadow .3s;
   position: absolute;
-  transform: rotate(10deg);
   box-shadow: 0 5px 15px #0000001a;
 }
 
 .top-left {
+  --rotation: 10deg;
   top: 10%;
   left: 15%;
-  transform: rotate(10deg);
 }
 
 .top-right {
+  --rotation: -10deg;
   top: 10%;
   right: 15%;
-  transform: rotate(-10deg);
 }
 
 .bottom-left {
+  --rotation: -10deg;
   bottom: 10%;
   left: 15%;
-  transform: rotate(-10deg);
 }
 
 .bottom-right {
+  --rotation: 10deg;
   bottom: 10%;
   right: 15%;
-  transform: rotate(10deg);
 }
 
 .reviews-section:hover .review-card {
-  animation: .8s infinite alternate shake;
+  animation: .8s ease-in-out infinite alternate shake;
 }
 
 @keyframes shake {
   0% {
-    transform: rotate(10deg)translateX(0)translateY(0);
+    transform: rotate(var(--rotation)) translate(0, 0);
   }
 
   25% {
-    transform: rotate(10deg)translateX(-2px)translateY(1px);
+    transform: rotate(var(--rotation)) translate(-3px, 2px);
   }
 
   50% {
-    transform: rotate(10deg)translateX(2px)translateY(-1px);
+    transform: rotate(var(--rotation)) translate(3px, -2px);
   }
 
   75% {
-    transform: rotate(10deg)translateX(-1px)translateY(1px);
+    transform: rotate(var(--rotation)) translate(-2px, 1px);
   }
 
   100% {
-    transform: rotate(10deg)translateX(0)translateY(0);
+    transform: rotate(var(--rotation)) translate(0, 0);
   }
 }
 
@@ -842,5 +854,107 @@ header {
 .review-author {
   color: #555;
   font-weight: bold;
+}
+
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--main-font);
+  padding: 100px 80px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.footer-address {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-socials .social-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-socials svg {
+  fill: #fff;
+}
+
+.footer-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-menu {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  color: #f39c12;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-desc {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-cta {
+  background-color: var(--white);
+  color: #000;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-cta:hover {
+  background-color: var(--light-gray);
+}
+
+@media (width <= 768px) {
+  .footer-container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=index.8e376639.css.map */
