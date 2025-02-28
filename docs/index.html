@@ -16,7 +16,9 @@
 <body>
       
   <header class="header">
-    <div class="logo">Logo</div>
+    <a href="./index.html" class="logo-link">
+      <div class="logo">Logo</div>
+  </a>
     <nav>
       <ul class="menu">
         <li><a href="#">Продукція</a></li>
@@ -26,12 +28,22 @@
       </ul>
     </nav>
     <div class="icons">
-      <a href="#" class="icon">
-        <svg width="24" height="24">
+      <a href="#" class="icon" id="cart-icon">
+        <svg width="24" height="24" fill="black">
           <use href="./media/icons.svg#basket"></use>
         </svg>
       </a>
-      <a href="#" class="icon">
+      <div class="cart-modal" id="cart-modal">
+        <div class="modal-content">
+          <p>Ваша корзина ще пуста</p>
+          <button class="close-btn" id="close-btn">
+            <svg>
+              <use href="./media/icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <a href="./products.html" class="icon">
         <svg width="24" height="24">
           <use href="./media/icons.svg#search"></use>
         </svg>
@@ -42,6 +54,7 @@
         </svg>
       </a>
     </div>
+    
   </header>
   
     <section class="image-slider">
@@ -333,6 +346,7 @@
     <script src="./js/slider-wrapper.js"></script>
     <script src="./js/special-slider.js"></script>
     <script src="./js/review-card.js"></script>
+    <script src="./js/cart-modal.js"></script>
 
 </body>
 </html>

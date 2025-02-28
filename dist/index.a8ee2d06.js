@@ -1,17 +1,18 @@
 window.addEventListener("scroll", function() {
     const header = document.querySelector(".header");
     const footer = document.querySelector(".footer");
-    if (!header || !footer) return;
+    const button = document.querySelector(".fixed-vertical-button");
+    if (!header || !footer || !button) return;
     const footerTop = footer.getBoundingClientRect().top;
-    const headerHeight = header.offsetHeight;
+    const windowHeight = window.innerHeight;
     if (window.scrollY > 100) header.classList.add("scrolled");
     else header.classList.remove("scrolled");
-    if (footerTop <= headerHeight + 10) {
-        header.style.opacity = "0";
-        header.style.pointerEvents = "none";
+    if (footerTop <= windowHeight) {
+        header.classList.add("hidden");
+        button.classList.add("hidden");
     } else {
-        header.style.opacity = "1";
-        header.style.pointerEvents = "auto";
+        header.classList.remove("hidden");
+        button.classList.remove("hidden");
     }
 });
 
