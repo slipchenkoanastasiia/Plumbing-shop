@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plumbing-shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/index.8e376639.css">
+    <link rel="stylesheet" href="/index.db39f534.css">
+    <link rel="stylesheet" href="/products.4dccc750.css">
+    <link rel="stylesheet" href="/index.cdc8632b.css">
+</head>
+<body>
+      
+  <header class="header">
+    <a href="/index.html" class="logo-link">
+        <div class="logo">Logo</div>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Продукція</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Доставка і оплата</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <a href="#" class="icon" id="cart-icon">
+        <svg width="24" height="24" fill="black">
+          <use href="/icons.db4458ec.svg#basket"></use>
+        </svg>
+      </a>
+      <div class="cart-modal" id="cart-modal">
+        <div class="modal-content">
+          <p>Ваша корзина ще пуста</p>
+          <button class="close-btn" id="close-btn">
+            <svg>
+              <use href="/icons.db4458ec.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <a href="#" class="icon">
+        <svg width="24" height="24">
+          <use href="/icons.db4458ec.svg#search"></use>
+        </svg>
+      </a>
+      <a href="#" class="icon">
+        <svg width="24" height="24">
+          <use href="/icons.db4458ec.svg#user"></use>
+        </svg>
+      </a>
+    </div>
+  </header>  
+
+  <main>
+    <div class="menu-filters container">
+        <div class="header-content">
+            <div class="left-content">
+            </div>
+            <div class="right-content">
+              <div class="sort">
+                <label for="sort">Сортувати:</label>
+                <div class="custom-select">
+                    <select id="sort" class="hidden" name="sort">
+                        <option value="default">за замовчуванням</option>
+                        <option value="price">по ціні</option>
+                        <option value="popularity">за популярністю</option>
+                    </select>
+                    <svg width="17" height="17" class="arrow-icon" id="sort-arrow">
+                        <use href="/icons.db4458ec.svg#arrow-right"></use>
+                    </svg>
+                </div>
+            </div>                
+            </div>
+        </div>
+        
+        <button class="show-filters-btn" onclick="toggleFilters()">Показати фільтри</button>
+            <div class="content">
+                <div class="filters">
+                    <form>
+                        <div class="filter-group">
+                            <label for="length">Категорія</label>
+                            <select id="length" name="length">
+                                <option>Змішувачі для кухні</option>
+                                <option>Змішувачі для ванни</option>
+                                <option>Душові системи</option>
+                                <option>Аксесуари</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="size">Виробник</label>
+                            <select id="size" name="size">
+                                <option>Grohe</option>
+                                <option>Kludi</option>
+                                <option>Hensgrohe</option>
+                                <option>Blanko</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="color">Покриття</label>
+                            <select id="color" name="color">
+                                <option value="white">Хром</option>
+                                <option value="beige">Метал</option>
+                                <option value="black">Фарба</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="discount">Знижка</label>
+                            <select id="discount" name="discount">
+                                <option value="discount">Зі знижкою</option>
+                                <option value="none">Без знижки</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                          <label for="price">Вартість</label>
+                          <div class="price-from">
+                              <label for="minPrice">от</label>
+                              <input type="number" id="minPrice" value="10000" oninput="updatePrice()" min="0">
+                              <svg width="17" height="17" onclick="increaseMinPrice()">
+                                  <use href="/icons.db4458ec.svg#arrow-right"></use>
+                              </svg>
+                          </div>
+                          <div class="price-to">
+                            <label for="maxPrice">до</label>
+                            <input type="number" id="maxPrice" value="40000" oninput="updatePrice()" min="0">
+                            <svg width="17" height="17" onclick="decreaseMaxPrice()">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                        </div>
+                          <div class="price-buttons">
+                              <button type="button" onclick="setPrice(0, 4000)">до 4 000 ₴</button>
+                              <button type="button" onclick="setPrice(4000, 7000)">4 000 - 9 000 ₴</button>
+                              <button type="button" onclick="setPrice(9000, 13000)">9 000 - 13 000 ₴</button>
+                              <button type="button" onclick="setPrice(130000, Infinity)">от 13 000 ₴</button>
+                          </div>
+                      </div>
+                      <button class="apply-filters-btn" type="submit">Застосувати</button>
+                  </form>
+              </div>
+              <div class="product-list-container">
+                <div class="product-list">
+                    <div class="product-row">
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod1.fb0ffe0d.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod2.f5dd8139.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod3.0c54c81c.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod4.4d821edd.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod1.fb0ffe0d.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod2.f5dd8139.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod3.0c54c81c.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod4.4d821edd.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                        <div class="product-item">
+                            <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+                                <use href="/icons.db4458ec.svg#arrow-right"></use>
+                            </svg>
+                            <img src="/prod1.fb0ffe0d.jpg" alt="#" width="236" height="368" loading="lazy">
+                            <p class="overlay">#</p>
+                            <h3 class="title-row">#</h3>
+                            <p class="caption-row">#</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <span class="page-number">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <span class="page-number">...</span>
+                    <span class="page-number">8</span>
+                </div>
+                <button id="show-more-btn">Дивитися ще</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-left">
+        <h2 class="footer-logo">LOGO</h2>
+        <p class="footer-address">#</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="24" height="24">
+              <use href="/icons.db4458ec.svg#instagram"></use>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="24" height="24">
+              <use href="/icons.db4458ec.svg#facebook"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+  
+      <div class="footer-center">
+        <h3>Меню</h3>
+        <ul class="footer-menu">
+          <li><a href="#products">Продукція</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#delivery">Доставка і оплата</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-desc">Ми знаємо, як допомогти вам обрати найкраще рішення</p>
+        <a href="#consultation" class="footer-cta">Замовити консультацію</a>
+      </div>
+  
+    </div>
+  </footer>
+    
+  <script src="/index.92bb8ed8.js"></script>
+  <script src="/products.5b2f169f.js"></script>
+
+<script src="/catalog.e32e3231.js"></script></body>
+</html>
