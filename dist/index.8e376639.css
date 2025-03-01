@@ -235,27 +235,24 @@ img {
   text-decoration: none;
 }
 
-.close-btn {
+.closee-btn {
   cursor: pointer;
   background: none;
   border: none;
-  width: 24px;
-  height: 24px;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 7px;
+  right: 7px;
 }
 
-.close-btn svg {
+.closee-btn svg {
   width: 100%;
   height: 100%;
-  stroke: var(--black);
-  stroke-width: 1px;
+  stroke-width: 1px !important;
+  width: 13px !important;
+  height: 13px !important;
 }
 
-.close-btn svg:hover {
-  stroke: var(--medium-gray);
-  stroke-width: 1px;
+.closee-btn svg:hover {
   fill: var(--medium-gray);
 }
 

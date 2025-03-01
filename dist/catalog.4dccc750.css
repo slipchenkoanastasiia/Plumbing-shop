@@ -1,0 +1,71 @@
+.search-cont {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.search-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: relative;
+}
+
+.search-input {
+  border: 2px solid var(--main-color);
+  background-color: var(--light-gray);
+  width: 600px;
+  color: var(--bg-color);
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  padding: 15px 50px 15px 20px;
+  font-size: 16px;
+}
+
+.search-icon {
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+  fill: var(--bg-color);
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 270px);
+  transform: translateY(-50%);
+}
+
+.search-input::placeholder {
+  text-align: left;
+  letter-spacing: .2px;
+  color: var(--bg-color);
+  font-size: 16px;
+  line-height: 1.1;
+  font-family: var(--primary-font);
+  opacity: .6;
+  font-weight: 500;
+}
+
+.close-btn {
+  cursor: pointer;
+  z-index: 10;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 100px;
+  right: 60px;
+}
+
+.close-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--black);
+  stroke-width: 1px;
+}
+
+.close-btn svg:hover {
+  stroke: var(--medium-gray);
+  stroke-width: 1px;
+  fill: var(--medium-gray);
+}
+/*# sourceMappingURL=catalog.4dccc750.css.map */
