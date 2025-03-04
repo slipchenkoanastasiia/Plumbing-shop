@@ -149,39 +149,35 @@ function toggleFilters() {
                         </div>
                     </div>
                     
-                        <div class="filter-group">
-                            <label for="discount">Знижка</label>
-                            <select id="discount" name="discount">
-                                <option value="discount">Зі знижкою</option>
-                                <option value="none">Без знижки</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                          <label for="price">Вартість</label>
-                          <div class="price-from">
-                              <label for="minPrice">от</label>
-                              <input type="number" id="minPrice" value="10000" oninput="updatePrice()" min="0">
-                              <svg width="17" height="17" onclick="increaseMinPrice()">
-                                  <use href="/icons.db4458ec.svg#arrow-right"></use>
-                              </svg>
-                          </div>
-                          <div class="price-to">
-                            <label for="maxPrice">до</label>
-                            <input type="number" id="maxPrice" value="40000" oninput="updatePrice()" min="0">
-                            <svg width="17" height="17" onclick="decreaseMaxPrice()">
-                                <use href="/icons.db4458ec.svg#arrow-right"></use>
-                            </svg>
-                        </div>
-                          <div class="price-buttons">
-                              <button type="button" onclick="setPrice(0, 4000)">до 4 000 ₴</button>
-                              <button type="button" onclick="setPrice(4000, 7000)">4 000 - 9 000 ₴</button>
-                              <button type="button" onclick="setPrice(9000, 13000)">9 000 - 13 000 ₴</button>
-                              <button type="button" onclick="setPrice(130000, Infinity)">от 13 000 ₴</button>
-                          </div>
+                    <div class="filter-group">
+                      <label for="price">Вартість</label>
+                  
+                      <div class="price-from">
+                          <label for="minPrice">від</label>
+                          <input type="number" id="minPrice" value="3000" oninput="updatePrice()" min="0">
+                          <svg width="17" height="17" onclick="changePrice('minPrice', 1000)" style="cursor: pointer">
+                              <use href="/icons.db4458ec.svg#arrow-right"></use>
+                          </svg>
                       </div>
-                      <button class="apply-filters-btn" type="submit">Застосувати</button>
-                  </form>
-              </div>
+                  
+                      <div class="price-to">
+                          <label for="maxPrice">до</label>
+                          <input type="number" id="maxPrice" value="16000" oninput="updatePrice()" min="0">
+                          <svg width="17" height="17" onclick="changePrice('maxPrice', -1000)" style="cursor: pointer">
+                              <use href="/icons.db4458ec.svg#arrow-right"></use>
+                          </svg>
+                      </div>
+                  
+                      <div class="price-buttons">
+                          <button type="button" onclick="setPrice(0, 4000)">до 4 000 ₴</button>
+                          <button type="button" onclick="setPrice(4000, 9000)">4 000 - 9 000 ₴</button>
+                          <button type="button" onclick="setPrice(9000, 13000)">9 000 - 13 000 ₴</button>
+                          <button type="button" onclick="setPrice(13000, 16000)">от 13 000 ₴</button>
+                      </div>
+                  </div>
+                  
+                  <button class="apply-filters-btn" type="submit">Застосувати</button>
+              </form></div>    
               <div class="product-list-container">
                 <div class="product-list">
                     <div class="product-row">
@@ -343,6 +339,7 @@ function toggleFilters() {
     
   <script src="/index.92bb8ed8.js"></script>
   <script src="/catalog.5b2f169f.js"></script>
+  <script src="/catalog.7e1e92aa.js"></script>
 
 <script src="/catalog.e32e3231.js"></script></body>
 </html>
