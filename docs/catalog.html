@@ -65,51 +65,90 @@
             </div>
             <div class="right-content">
               <div class="sort">
-                <label for="sort">Сортувати:</label>
-                <div class="custom-select">
-                    <select id="sort" class="hidden" name="sort">
-                        <option value="default">за замовчуванням</option>
-                        <option value="price">по ціні</option>
-                        <option value="popularity">за популярністю</option>
-                    </select>
-                    <svg width="17" height="17" class="arrow-icon" id="sort-arrow">
-                        <use href="./media/icons.svg#arrow-right"></use>
-                    </svg>
-                </div>
-            </div>                
-            </div>
-        </div>
-        
-        <button class="show-filters-btn" onclick="toggleFilters()">Показати фільтри</button>
+                  <div class="custom-select">
+                      <select id="sort">
+                          <option value="default">за замовчуванням</option>
+                          <option value="price">по ціні</option>
+                          <option value="popularity">за популярністю</option>
+                      </select>
+                  </div>
+              </div>
+              <button class="show-filters-btn" onclick="toggleSortDropdown()">
+                  <svg width="20" height="20">
+                      <use href="./media/icons.svg#filters"></use>
+                  </svg>
+              </button>
+          </div>
+          
+          </div>
+          
+          <script>
+        function toggleSortDropdown() {
+        const sortContainer = document.querySelector('.sort');
+        sortContainer.classList.toggle('active'); 
+    }
+        function toggleFilters() {
+        const filtersContainer = document.querySelector('.filters');
+        filtersContainer.classList.toggle('active');
+    }
+          </script>
+
             <div class="content">
                 <div class="filters">
                     <form>
-                        <div class="filter-group">
-                            <label for="length">Категорія</label>
-                            <select id="length" name="length">
-                                <option>Змішувачі для кухні</option>
-                                <option>Змішувачі для ванни</option>
-                                <option>Душові системи</option>
-                                <option>Аксесуари</option>
-                            </select>
+                      <div class="filter-group">
+                        <label for="length">Категорія</label>
+                        <div class="custom-select-wrapper">
+                            <div class="customs-select" onclick="toggleDropdown('length')">
+                                <span id="selected-option">Змішувачі для кухні</span>
+                                <svg class="arrow-icon" width="16" height="16">
+                                    <use href="./media/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                            <ul class="custom-dropdown" id="length-dropdown">
+                                <li>Змішувачі для кухні</li>
+                                <li>Змішувачі для ванни</li>
+                                <li>Душові системи</li>
+                                <li>Аксесуари</li>
+                            </ul>
                         </div>
-                        <div class="filter-group">
-                            <label for="size">Виробник</label>
-                            <select id="size" name="size">
-                                <option>Grohe</option>
-                                <option>Kludi</option>
-                                <option>Hensgrohe</option>
-                                <option>Blanko</option>
-                            </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="size">Виробник</label>
+                        <div class="custom-select-wrapper">
+                            <div class="customs-select" onclick="toggleDropdown('size')">
+                                <span id="selected-size">Grohe</span>
+                                <svg class="arrow-icon" width="16" height="16">
+                                    <use href="./media/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                            <ul class="custom-dropdown" id="size-dropdown">
+                                <li>Grohe</li>
+                                <li>Kludi</li>
+                                <li>Hensgrohe</li>
+                                <li>Blanko</li>
+                            </ul>
                         </div>
-                        <div class="filter-group">
-                            <label for="color">Покриття</label>
-                            <select id="color" name="color">
-                                <option value="white">Хром</option>
-                                <option value="beige">Метал</option>
-                                <option value="black">Фарба</option>
-                            </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="color">Покриття</label>
+                        <div class="custom-select-wrapper">
+                            <div class="customs-select" onclick="toggleDropdown('color')">
+                                <span id="selected-color">Хром</span>
+                                <svg class="arrow-icon" width="16" height="16">
+                                    <use href="./media/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                            <ul class="custom-dropdown" id="color-dropdown">
+                                <li>Хром</li>
+                                <li>Метал</li>
+                                <li>Фарба</li>
+                            </ul>
                         </div>
+                    </div>
+                    
                         <div class="filter-group">
                             <label for="discount">Знижка</label>
                             <select id="discount" name="discount">
@@ -281,6 +320,36 @@
   
     </div>
   </footer>
+
+  <script>
+    function toggleDropdown(selectType) {
+    const selectedDropdown = document.getElementById(`${selectType}-dropdown`);
+    const selectedWrapper = document.querySelector(`#${selectType}-dropdown`).parentElement;
+    const arrowIcon = selectedWrapper.querySelector('.arrow-icon');
+
+    // Закриваємо всі інші списки
+    const allDropdowns = document.querySelectorAll('.custom-dropdown');
+    const allWrappers = document.querySelectorAll('.custom-select-wrapper');
+
+    allDropdowns.forEach(dropdown => {
+        if (dropdown !== selectedDropdown) {
+            dropdown.style.display = 'none';
+        }
+    });
+
+    allWrappers.forEach(wrapper => {
+        if (wrapper !== selectedWrapper) {
+            wrapper.classList.remove('open');
+        }
+    });
+
+    // Перемикаємо вибраний список
+    selectedDropdown.style.display = selectedDropdown.style.display === 'block' ? 'none' : 'block';
+    selectedWrapper.classList.toggle('open');
+}
+
+
+  </script>
     
   <script src="./js/cart-modal.js"></script>
   <script src="./js/search-input.js"></script>

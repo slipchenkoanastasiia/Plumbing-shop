@@ -86,8 +86,8 @@ img {
 }
 
 .container {
-  padding: 0; 
-  margin: 0;
+  padding: 0;
+  margin: 0 40px;
   width: auto;
 }
 
@@ -1009,7 +1009,8 @@ img {
 
 .footer-logo {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: var(--white);
 }
 
 .footer-address {
