@@ -97,7 +97,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1;
-  font-family: var(--accent-font);
+  font-family: var(--main-font);
   margin-bottom: 10px;
   display: block;
 }
@@ -111,7 +111,7 @@
 .custom-select select {
   width: 100%;
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--main-font);
   color: var(--black);
   background-color: var(--light-gray);
   border: 1px solid var(--black);
@@ -135,7 +135,7 @@ option {
   font-size: 16px;
   font-weight: 400;
   line-height: .7;
-  font-family: var(--accent-font);
+  font-family: var(--main-font);
   background-color: var(--white);
 }
 
@@ -191,8 +191,8 @@ option:hover {
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  font-family: var(--accent-font);
-  padding: 8px 12px;
+  font-family: var(--main-font);
+  padding: 6px 12px;
 }
 
 .custom-dropdown li:hover {
@@ -287,13 +287,14 @@ option:hover {
   color: var(--white);
 }
 
-.apply-filters-btn {
+.filters form button[type="submit"] {
   letter-spacing: .2px;
   color: var(--white);
   background-color: var(--black);
   cursor: pointer;
   border: 1px solid #000;
   border-radius: 5px;
+  width: 100%;
   margin-top: 10px;
   padding: 10px 15px;
   font-size: 14px;
@@ -304,11 +305,6 @@ option:hover {
 
 .filters form button[type="submit"]:hover {
   background-color: var(--light-gray);
-  color: var(--black);
-}
-
-.filters form button[type="submit"]:active {
-  background-color: var(--white);
   color: var(--black);
 }
 
@@ -336,36 +332,43 @@ option:hover {
   flex: 0 0 calc(33.33% - 10px);
   margin-bottom: 30px;
   position: relative;
+  overflow: hidden;
 }
 
 .product-item img {
   object-fit: cover;
   width: 100%;
   height: 398px;
+  display: block;
 }
 
-.overlay {
-  background-color: var(--main-brand-color);
+.product-item .image-wrapper {
   width: 100%;
-  height: 52px;
-  color: var(--bg-color);
-  text-align: center;
-  letter-spacing: 1px;
-  opacity: 0;
-  pointer-events: none;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 52px;
-  transition: opacity .3s cubic-bezier(.4, 0, .2, 1);
+  height: 398px;
+  position: relative;
+}
+
+.product-item .image-wrapper img {
+  object-fit: cover;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.product-item .image-wrapper:after {
+  content: "";
+  background-color: #0000;
+  width: 100%;
+  height: 100%;
+  transition: background-color .3s ease-in-out;
   position: absolute;
-  bottom: 56px;
+  top: 0;
   left: 0;
 }
 
-.product-item:hover .overlay, .product-item:focus .overlay {
-  opacity: 1;
-  pointer-events: auto;
+.product-item:hover .image-wrapper:after {
+  background-color: #00000080;
 }
 
 .svg-row {
