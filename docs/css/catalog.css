@@ -221,11 +221,46 @@ option:hover {
   
 .price-from, .price-to {
     display: flex;
-    align-items: center; 
-    margin-bottom: 10px; 
-    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
 }
-  
+
+.price-from input, .price-to input {
+    width: 60px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 0.7;
+    letter-spacing: 0.3px;
+    color: var(--black);
+    font-weight: 600;
+    font-family: var(--main-font);
+}
+
+.price-controls svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.price-controls svg:hover {
+    transform: translateX(3px); 
+}
+
+.price-controls svg:active {
+    transform: translateX(5px); 
+}
+
+.price-controls {
+    display: flex;
+    gap: 0; 
+    margin-left: auto; 
+    justify-content: flex-end; 
+    align-items: center;
+}
+
 .price-from label, .price-to label {
     margin-right: 5px;
     font-size: 14px;
@@ -239,21 +274,19 @@ option:hover {
     align-items: center; 
     margin-top: 10px;
  }
-  
+
 .price-from input, .price-to input {
-    flex: 1;
-    padding: 8px;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: 0.2px;
-    color: var(--black);
-    font-weight: 600;
-    border: none; 
-    outline: none; 
-    box-sizing: border-box; 
-    vertical-align: middle; 
+    -moz-appearance: textfield;
 }
-  
+
+.price-from input::-webkit-outer-spin-button,
+.price-from input::-webkit-inner-spin-button,
+.price-to input::-webkit-outer-spin-button,
+.price-to input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .price-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -487,6 +520,32 @@ option:hover {
     background-color: var(--white);
     color: var(--black);
     border: 1px solid #000;
+}
+
+.prev-page, .next-page {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.prev-page:hover,
+.next-page:hover {
+    opacity: 0.7;
+    color: var(--light-gray);
+}
+
+.prev-page svg, .next-page svg {
+    fill: var(--black); 
+    transition: fill 0.3s ease;
+}
+
+.prev-page:hover svg,
+.next-page:hover svg {
+    fill: var(--medium-gray); 
 }
 
 .product-list-container {

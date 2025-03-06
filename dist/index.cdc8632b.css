@@ -215,9 +215,44 @@ option:hover {
 }
 
 .price-from, .price-to {
-  cursor: pointer;
   align-items: center;
   margin-bottom: 10px;
+  display: flex;
+}
+
+.price-from input, .price-to input {
+  text-align: center;
+  letter-spacing: .3px;
+  width: 60px;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: .7;
+  font-family: var(--main-font);
+  border: none;
+  padding: 5px;
+}
+
+.price-controls svg {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transition: transform .3s ease-out;
+}
+
+.price-controls svg:hover {
+  transform: translateX(3px);
+}
+
+.price-controls svg:active {
+  transform: translateX(5px);
+}
+
+.price-controls {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
   display: flex;
 }
 
@@ -236,17 +271,27 @@ option:hover {
 }
 
 .price-from input, .price-to input {
-  letter-spacing: .2px;
-  color: var(--black);
-  box-sizing: border-box;
-  vertical-align: middle;
-  border: none;
-  outline: none;
-  flex: 1;
-  padding: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
+  -moz-appearance: textfield;
+}
+
+.price-from input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-from input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-to input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-to input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .price-buttons {
@@ -466,6 +511,30 @@ option:hover {
   background-color: var(--white);
   color: var(--black);
   border: 1px solid #000;
+}
+
+.prev-page, .next-page {
+  cursor: pointer;
+  background: none;
+  border: none;
+  align-items: center;
+  padding: 5px;
+  transition: opacity .3s;
+  display: flex;
+}
+
+.prev-page:hover, .next-page:hover {
+  opacity: .7;
+  color: var(--light-gray);
+}
+
+.prev-page svg, .next-page svg {
+  fill: var(--black);
+  transition: fill .3s;
+}
+
+.prev-page:hover svg, .next-page:hover svg {
+  fill: var(--medium-gray);
 }
 
 .product-list-container {

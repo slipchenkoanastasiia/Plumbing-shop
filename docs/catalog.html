@@ -19,11 +19,11 @@
       
   <header class="header">
     <a href="./index.html" class="logo-link">
-        <div class="logo">Logo</div>
-    </a>
+      <div class="logo">Logo</div>
+  </a>
     <nav>
       <ul class="menu">
-        <li><a href="#">Продукція</a></li>
+        <li><a href="./catalog.html">Продукція</a></li>
         <li><a href="#">Про нас</a></li>
         <li><a href="#">Доставка і оплата</a></li>
         <li><a href="#">Контакти</a></li>
@@ -38,25 +38,26 @@
       <div class="cart-modal" id="cart-modal">
         <div class="modal-content">
           <p>Ваша корзина ще пуста</p>
-          <button class="close-btn" id="close-btn">
+          <button class="closee-btn" id="close-btn">
             <svg>
               <use href="./media/icons.svg#cross"></use>
             </svg>
           </button>
         </div>
       </div>
-      <a href="#" class="icon">
+      <a href="./products.html" class="icon">
         <svg width="24" height="24">
           <use href="./media/icons.svg#search"></use>
         </svg>
       </a>
-      <a href="#" class="icon">
+      <a href="#" class="icon link-icon open-login-modal">
         <svg width="24" height="24">
           <use href="./media/icons.svg#user"></use>
         </svg>
       </a>
     </div>
-  </header>  
+    
+  </header>
 
   <main>
     <div class="menu-filters container">
@@ -168,18 +169,29 @@
                       <div class="price-from">
                           <label for="minPrice">від</label>
                           <input type="number" id="minPrice" value="3000" oninput="updatePrice()" min="0">
-                          <svg width="17" height="17" onclick="changePrice('minPrice', 1000)" style="cursor: pointer;">
-                              <use href="./media/icons.svg#arrow-right"></use>
-                          </svg>
+                          <div class="price-controls">
+                              <svg width="17" height="17" onclick="changePrice('minPrice', 1000)" style="cursor: pointer;">
+                                  <use href="./media/icons.svg#arrow-right"></use>
+                              </svg>
+                              <svg width="17" height="17" onclick="changePrice('minPrice', -1000)" style="cursor: pointer;">
+                                  <use href="./media/icons.svg#arrow-left"></use>
+                              </svg>
+                          </div>
                       </div>
                   
                       <div class="price-to">
                           <label for="maxPrice">до</label>
                           <input type="number" id="maxPrice" value="16000" oninput="updatePrice()" min="0">
-                          <svg width="17" height="17" onclick="changePrice('maxPrice', -1000)" style="cursor: pointer;">
-                              <use href="./media/icons.svg#arrow-right"></use>
-                          </svg>
+                          <div class="price-controls">
+                              <svg width="17" height="17" onclick="changePrice('maxPrice', 1000)" style="cursor: pointer;">
+                                  <use href="./media/icons.svg#arrow-right"></use>
+                              </svg>
+                              <svg width="17" height="17" onclick="changePrice('maxPrice', -1000)" style="cursor: pointer;">
+                                  <use href="./media/icons.svg#arrow-left"></use>
+                              </svg>
+                          </div>
                       </div>
+                
                   
                       <div class="price-buttons">
                           <button type="button" onclick="setPrice(0, 4000)">до 4 000 ₴</button>
@@ -271,13 +283,26 @@
                               <p>Пропонуємо найкращі варіанти для вашого інтер'єру  &#11088</p>
                           </div>
                           <div class="pagination-container">
-                              <div class="pagination">
-                                  <span class="page-number">1</span>
-                                  <span class="page-number">2</span>
-                                  <span class="page-number">3</span>
-                                  <span class="page-number">...</span>
-                                  <span class="page-number">8</span>
-                              </div>
+                            <div class="pagination">
+                              <button class="prev-page">
+                                  <svg width="16" height="16">
+                                      <use href="./media/icons.svg#arrow-left"></use>
+                                  </svg>
+                              </button>
+                          
+                              <span class="page-number active">1</span>
+                              <span class="page-number">2</span>
+                              <span class="page-number">3</span>
+                              <span class="page-number">...</span>
+                              <span class="page-number">8</span>
+                          
+                              <button class="next-page">
+                                  <svg width="16" height="16">
+                                      <use href="./media/icons.svg#arrow-right"></use>
+                                  </svg>
+                              </button>
+                          </div>
+                          
                               <button id="show-more-btn">Дивитися ще</button>
                           </div>
                       </div>
@@ -338,11 +363,13 @@
   
     </div>
   </footer>
-    
+
+  <script src="./js/scrollhead.js"></script>
   <script src="./js/cart-modal.js"></script>
   <script src="./js/search-input.js"></script>
   <script src="./js/price.js"></script>
   <script src="./js/filters.js"></script>
+
 
 </body>
 </html>
