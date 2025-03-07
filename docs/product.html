@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/catalog.css">
+    <link rel="stylesheet" href="./css/product.css">
 </head>
 <body>
       
@@ -204,8 +205,54 @@
                   <button class="apply-filters-btn" type="submit">Застосувати</button>
               </div>    
 
- 
+              <div class="product-list-container">
+                <!-- Картка товару -->
+                <div class="product-card">
+                  <!-- Галерея зображень -->
+                  <div class="product-gallery">
+                    <img src="./media/hero1.jpg" alt="Main Image" class="product-main-image" />
+                  </div>
               
+                  <!-- Мініатюри -->
+                  <div class="product-thumbnails">
+                    <img src="./media/hero1.jpg" alt="Thumbnail 1" />
+                    <img src="./media/hero1.jpg" alt="Thumbnail 2" />
+                    <img src="./media/hero1.jpg" alt="Thumbnail 3" />
+                  </div>
+              
+                  <!-- Інформація про товар -->
+                  <div class="product-info">
+                    <div class="product-title">Назва товару</div>
+                    <div class="product-article">Артикул: 123456</div>
+                    <div class="product-price">$99.99</div>
+                    <div class="product-description">
+                      Опис товару: Тут може бути детальний опис товару, його характеристики і особливості.
+                    </div>
+                    <button class="add-to-cart">Додати в кошик</button>
+                  </div>
+                </div>
+              
+                <!-- Схожі товари -->
+                <div class="related-products">
+                  <h3>Схожі товари</h3>
+                  <div class="related-list">
+                    <div class="related-item">
+                      <img src="./media/hero1.jpg" alt="Related Product 1" />
+                      <div>Товар 1</div>
+                    </div>
+                    <div class="related-item">
+                      <img src="./media/hero1.jpg" alt="Related Product 2" />
+                      <div>Товар 2</div>
+                    </div>
+                    <div class="related-item">
+                      <img src="./media/hero1.jpg" alt="Related Product 3" />
+                      <div>Товар 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
             </main>
             
             <footer class="footer">
