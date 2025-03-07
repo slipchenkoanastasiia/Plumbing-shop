@@ -377,6 +377,10 @@ option:hover {
   display: block;
 }
 
+.image-wrapper {
+  cursor: pointer;
+}
+
 .catalog-img-wrapper:after {
   content: "";
   background-color: #0000;
