@@ -223,6 +223,7 @@
 
 .delivery-container {
   background-color: var(--light-gray);
+  text-align: center;
   border-radius: 10px;
   padding: 40px;
 }
@@ -230,65 +231,61 @@
 .delivery-container h2 {
   font-family: var(--accent-font);
   color: var(--black);
-  letter-spacing: .2px;
-  margin-bottom: 40px;
-  font-size: 22px;
+  margin-bottom: 10px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.5;
-  text-decoration: none;
 }
 
-.delivery-content {
-  justify-content: space-between;
-  gap: 40px;
+.delivery-subtitle {
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.delivery-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  display: grid;
+}
+
+.delivery-card {
+  text-align: left;
+  aspect-ratio: 3 / 4;
+  background: #e6e6e6;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
   display: flex;
 }
 
-.delivery-info, .payment-info {
-  flex: 1;
-  max-width: 50%;
+.delivery-card .icon {
+  margin-bottom: 10px;
+  font-size: 30px;
 }
 
-.delivery-info h3, .payment-info h3 {
-  font-family: var(--accent-font);
-  color: var(--black);
-  letter-spacing: .2px;
-  align-items: center;
-  margin-bottom: 20px;
+.delivery-card h3 {
+  color: #000;
+  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.5;
-  text-decoration: none;
-  display: flex;
 }
 
-.delivery-info h3:before, .payment-info h3:before {
-  margin-right: 10px;
-}
-
-.delivery-info p {
-  font-family: var(--main-font);
-  color: var(--black);
-  letter-spacing: .1px;
-  margin-top: 10px;
+.delivery-card p {
+  color: #333;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
 }
 
-.payment-info ul {
-  padding: 0;
-  list-style: none;
+@media (width <= 768px) {
+  .delivery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.payment-info li {
-  font-family: var(--main-font);
-  color: var(--black);
-  letter-spacing: .1px;
-  margin-bottom: 4px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.2;
-  position: relative;
+@media (width <= 480px) {
+  .delivery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 /*# sourceMappingURL=product.fb72c002.css.map */

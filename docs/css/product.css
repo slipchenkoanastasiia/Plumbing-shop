@@ -227,83 +227,74 @@
   bottom: 0;
 }
 
-/* Доставка і оплата */
+
 .delivery-container {
   background-color: var(--light-gray);
   padding: 40px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .delivery-container h2 {
   font-family: var(--accent-font);
-  text-decoration: none;
   color: var(--black);
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.5; 
-  letter-spacing: 0.2px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
-.delivery-content {
+.delivery-subtitle {
+  font-size: 16px;
+  color: var(--dark-gray);
+  margin-bottom: 30px;
+}
+
+/* Сітка 2 ряди по 3 картки */
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Окремі картки (3:4 пропорція) */
+.delivery-card {
+  background: #e6e6e6; /* Світло-сірий фон */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  aspect-ratio: 3 / 4; /* Пропорція 3:4 */
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.delivery-info,
-.payment-info {
-  flex: 1;
-  max-width: 50%;
+.delivery-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-.delivery-info h3,
-.payment-info h3 {
-  font-family: var(--accent-font);
-  text-decoration: none;
-  color: var(--black);
+.delivery-card h3 {
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.5; 
-  letter-spacing: 0.2px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  color: #000; /* Чорний текст */
+  margin-bottom: 10px;
 }
 
-.delivery-info h3::before {
-  margin-right: 10px;
-}
-
-.payment-info h3::before {
-  margin-right: 10px;
-}
-
-.delivery-info p {
-  margin-top: 20px;
-  font-family: var(--main-font);
+.delivery-card p {
   font-size: 16px;
-  color: var(--black);
-  font-weight: 400;
-  line-height: 1.2; 
-  letter-spacing: 0.1px;
-  margin-top: 10px;
+  color: #333; /* Темно-сірий текст */
 }
 
-.payment-info ul {
-  list-style: none;
-  padding: 0;
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .delivery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
 }
 
-.payment-info li {
-  font-family: var(--main-font);
-  font-size: 16px;
-  color: var(--black);
-  font-weight: 400;
-  line-height: 1.2; 
-  letter-spacing: 0.1px;
-  position: relative;
-  margin-bottom: 4px;
+@media (max-width: 480px) {
+  .delivery-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 колонка на мобільних */
+  }
 }
-
-
