@@ -228,4 +228,82 @@
 }
 
 /* Доставка і оплата */
+.delivery-container {
+  background-color: var(--light-gray);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.delivery-container h2 {
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+  margin-bottom: 40px;
+}
+
+.delivery-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.delivery-info,
+.payment-info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.delivery-info h3,
+.payment-info h3 {
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-info h3::before {
+  margin-right: 10px;
+}
+
+.payment-info h3::before {
+  margin-right: 10px;
+}
+
+.delivery-info p {
+  margin-top: 20px;
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 1.2; 
+  letter-spacing: 0.1px;
+  margin-top: 10px;
+}
+
+.payment-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-info li {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: var(--black);
+  font-weight: 400;
+  line-height: 1.2; 
+  letter-spacing: 0.1px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
 
