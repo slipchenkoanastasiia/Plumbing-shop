@@ -227,47 +227,72 @@
   bottom: 0;
 }
 
-
+/* Доставка та оплата */
 .delivery-container {
-  background-color: var(--light-gray);
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
+.delivery-grid {
+  position: relative;
+  width: 320px;
+  height: 300px;
+}
+
+/* Картки у стопці */
+.delivery-card {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: var(--light-gray);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 1;
+}
+
+/* Початкове розташування карток */
+.delivery-card:nth-child(1) { z-index: 6; transform: translateY(0); }
+.delivery-card:nth-child(2) { z-index: 5; transform: translateY(10px); }
+.delivery-card:nth-child(3) { z-index: 4; transform: translateY(20px); }
+.delivery-card:nth-child(4) { z-index: 3; transform: translateY(30px); }
+.delivery-card:nth-child(5) { z-index: 2; transform: translateY(40px); }
+.delivery-card:nth-child(6) { z-index: 1; transform: translateY(50px); }
+
+
 .delivery-container h2 {
-  font-family: var(--accent-font);
-  color: var(--black);
-  font-size: 28px;
+  font-family: var(--main-font);
+  font-size: 32px;
   font-weight: 700;
+  color: var(--black); 
+  margin-bottom: 20px;
+  text-align: left;
   margin-bottom: 10px;
 }
 
 .delivery-subtitle {
-  font-size: 16px;
-  color: var(--dark-gray);
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+  text-align: left;
   margin-bottom: 30px;
 }
 
-/* Сітка 2 ряди по 3 картки */
-.delivery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-/* Окремі картки (3:4 пропорція) */
-.delivery-card {
-  background: #e6e6e6; /* Світло-сірий фон */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: left;
-  aspect-ratio: 3 / 4; /* Пропорція 3:4 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
 
 .delivery-card .icon {
   font-size: 30px;
@@ -275,26 +300,23 @@
 }
 
 .delivery-card h3 {
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: var(--black);
   font-size: 18px;
   font-weight: 700;
-  color: #000; /* Чорний текст */
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
   margin-bottom: 10px;
 }
 
 .delivery-card p {
-  font-size: 16px;
-  color: #333; /* Темно-сірий текст */
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3; 
+  letter-spacing: 0.2px;
 }
 
-/* Адаптивність для мобільних */
-@media (max-width: 768px) {
-  .delivery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
-  }
-}
-
-@media (max-width: 480px) {
-  .delivery-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 колонка на мобільних */
-  }
-}
