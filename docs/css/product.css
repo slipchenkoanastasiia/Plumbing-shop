@@ -35,25 +35,23 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50%; /* Підложка займає половину висоти */
+  height: 50%; 
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--white);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Назва + ціна зверху, опис + кнопка внизу */
+  justify-content: space-between; 
   align-items: flex-start;
   transition: background-color 0.3s ease-in-out;
 }
 
-
 .product-titleg,
 .product-articleg,
 .product-priceg {
-  margin: 0; /* Забираємо зайві відступи */
+  margin: 0;
   padding: 0;
 }
-
 
 .info-top {
   display: flex;
@@ -143,7 +141,6 @@
   display: block;
 }
 
-
 /* Схожі товари */
 .related-products {
   width: 100%;
@@ -229,94 +226,136 @@
 
 /* Доставка та оплата */
 .delivery-container {
-  position: relative;
-  width: 100%;
-  height: 500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
-  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.delivery-text {
+  align-self: flex-start; 
+  width: 100%;
+  max-width: 600px; 
+}
+
+.delivery-text h2 {
+  font-family: var(--main-font);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.delivery-subtitle {
+  font-family: var(--main-font);
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: left;
+
 }
 
 .delivery-grid {
   position: relative;
-  width: 320px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 100%;
+  height: 360px;
 }
 
-/* Картки у стопці */
 .delivery-card {
   position: absolute;
-  width: 100%;
-  height: 150px;
+  width: 530px;
+  height: 330px;
   background: var(--light-gray);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 15px;
+  padding: 25px;
   text-align: left;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.12);
   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   opacity: 1;
+  transform-origin: top center; 
+  transform: rotate(-2deg); 
 }
 
-/* Початкове розташування карток */
-.delivery-card:nth-child(1) { z-index: 6; transform: translateY(0); }
-.delivery-card:nth-child(2) { z-index: 5; transform: translateY(10px); }
-.delivery-card:nth-child(3) { z-index: 4; transform: translateY(20px); }
-.delivery-card:nth-child(4) { z-index: 3; transform: translateY(30px); }
-.delivery-card:nth-child(5) { z-index: 2; transform: translateY(40px); }
-.delivery-card:nth-child(6) { z-index: 1; transform: translateY(50px); }
+.delivery-card:nth-child(1) { z-index: 6; transform: translateY(0) rotate(-2deg); }
+.delivery-card:nth-child(2) { z-index: 5; transform: translateY(15px) rotate(-4deg); }
+.delivery-card:nth-child(3) { z-index: 4; transform: translateY(30px) rotate(-6deg); }
+.delivery-card:nth-child(4) { z-index: 3; transform: translateY(45px) rotate(-8deg); }
+.delivery-card:nth-child(5) { z-index: 2; transform: translateY(60px) rotate(-10deg); }
+.delivery-card:nth-child(6) { z-index: 1; transform: translateY(75px) rotate(-12deg); }
 
-
-.delivery-container h2 {
-  font-family: var(--main-font);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--black); 
-  margin-bottom: 20px;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.delivery-subtitle {
-  font-family: var(--accent-font);
-  text-decoration: none;
-  color: var(--black);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5; 
-  letter-spacing: 0.2px;
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-
-.delivery-card .icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
 
 .delivery-card h3 {
   font-family: var(--main-font);
-  text-decoration: none;
-  color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.5; 
+  color: var(--black);
+  line-height: 1.5;
   letter-spacing: 0.2px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .delivery-card p {
-  font-family: var(--main-font);
-  text-decoration: none;
-  color: var(--black);
   font-size: 15px;
   font-weight: 400;
-  line-height: 1.3; 
+  color: var(--black);
+  line-height: 1.5;
   letter-spacing: 0.2px;
 }
 
+.contact-info {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 10px; 
+  font-size: 20px;
+  margin-top: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contact-info h3 {
+  font-family: var(--main-font);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+.contact-button {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: var(--main-font);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.contact-button svg {
+  margin-left: 1px; 
+}
+
+.contact-button:hover {
+  fill: var(--medium-gray);
+}

@@ -193,7 +193,6 @@
                           </div>
                       </div>
                 
-                  
                       <div class="price-buttons">
                           <button type="button" onclick="setPrice(0, 4000)">до 4 000 ₴</button>
                           <button type="button" onclick="setPrice(4000, 9000)">4 000 - 9 000 ₴</button>
@@ -225,8 +224,6 @@
                   </div>
                 </div>
                 
-                
-                
                 <div class="related-products">
                   <h3>Вас можуть зацікавити</h3>
                   <div class="related-list">
@@ -246,35 +243,32 @@
                 </div>
                 
                 <div class="delivery-container">
-                  <h2>Легко та зручно з нами 🖇️ </h2>
-                  <p class="delivery-subtitle">Доставка по всій Україні та зручні способи оплати</p>
+                  <div class="delivery-text">
+                    <h2>Легко та зручно з нами 🖇️</h2>
+                    <p class="delivery-subtitle">Доставка по всій Україні та зручні способи оплати</p>
+                  </div>
                 
                   <div class="delivery-grid">
                     <div class="delivery-card">
                       <h3>Швидка доставка</h3>
                       <p>Отримуйте замовлення у найкоротші терміни завдяки нашій співпраці з провідними кур'єрськими службами.</p>
                     </div>
-                
                     <div class="delivery-card">
                       <h3>Доставка по всій Україні</h3>
                       <p>Доставляємо у будь-яке місто України через популярні поштові та кур'єрські служби.</p>
                     </div>
-                
                     <div class="delivery-card">
                       <h3>Самовивіз</h3>
                       <p>Можливість забрати товар самостійно у наших точках видачі.</p>
                     </div>
-                
                     <div class="delivery-card">
                       <h3>Готівкою при отриманні</h3>
                       <p>Оплачуйте товар при отриманні у відділенні пошти або у кур'єра.</p>
                     </div>
-                
                     <div class="delivery-card">
                       <h3>Оплата карткою</h3>
                       <p>Приймаємо онлайн-оплату через банківські картки Visa/Mastercard.</p>
                     </div>
-                
                     <div class="delivery-card">
                       <h3>Безготівковий розрахунок</h3>
                       <p>Юридичні особи можуть оплатити товар через банківський переказ.</p>
@@ -282,46 +276,18 @@
                   </div>
                 </div>
                 
-                <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".delivery-card");
-  let currentIndex = 0;
-  let lastScrollY = window.scrollY;
-  let isAnimating = false;
-
-  window.addEventListener("wheel", (event) => {
-    if (isAnimating || currentIndex >= cards.length) return;
-
-    const scrollDirection = event.deltaY > 0 ? "down" : "up";
-    if (scrollDirection !== "up") return;
-
-    isAnimating = true;
-    const card = cards[currentIndex];
-
-    // Ховаємо поточну картку
-    card.style.transform = "translateY(-120px) scale(0.8)";
-    card.style.opacity = "0";
-
-    currentIndex++;
-
-    // Зміщуємо решту карток вгору
-    for (let i = currentIndex; i < cards.length; i++) {
-      cards[i].style.transform = `translateY(${i * 10 - currentIndex * 10}px)`;
-    }
-
-    setTimeout(() => {
-      isAnimating = false;
-    }, 500);
-  });
-});
-
-                </script>
-                
-                
+                <div class="contact-info">
+                  <h3>Маєте питання? Зв’яжіться з нами!</h3>
+                  <a href="#" class="contact-button">
+                    <svg width="24" height="24">
+                      <use href="./media/icons.svg#telegram"></use>
+                    </svg>
+                  </a>
                 </div>
-                
-                
+      
               </div>
+            </div>
+          </div>
             
             </main>
             
@@ -368,6 +334,7 @@
               <script src="./js/search-input.js"></script>
               <script src="./js/price.js"></script>
               <script src="./js/filters.js"></script>
+              <script src="./js/delivery-card.js"></script>
             
             
             </body>
