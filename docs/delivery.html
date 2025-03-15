@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plumbing-shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/catalog.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/delivery.css">
+</head>
+<body>
+      
+  <header class="header">
+    <a href="./index.html" class="logo-link">
+      <div class="logo">Logo</div>
+  </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="./catalog.html">Продукція</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Доставка і оплата</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <a href="#" class="icon" id="cart-icon">
+        <svg width="24" height="24" fill="black">
+          <use href="./media/icons.svg#basket"></use>
+        </svg>
+      </a>
+      <div class="cart-modal" id="cart-modal">
+        <div class="modal-content">
+          <p>Ваша корзина ще пуста</p>
+          <button class="closee-btn" id="close-btn">
+            <svg>
+              <use href="./media/icons.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <a href="./search.html" class="icon">
+        <svg width="24" height="24">
+          <use href="./media/icons.svg#search"></use>
+        </svg>
+      </a>
+      <a href="#" class="icon link-icon open-login-modal">
+        <svg width="24" height="24">
+          <use href="./media/icons.svg#user"></use>
+        </svg>
+      </a>
+    </div>
+    
+  </header>
+
+  <main>
+    <div class="delivery-containerd">
+        <h2>Легко та зручно з нами 🖇️ </h2>
+        <p class="delivery-subtitled">Доставка по всій Україні та зручні способи оплати</p>
+      
+        <div class="delivery-gridd">
+          <div class="delivery-cardd">
+            <h3>Швидка доставка</h3>
+            <p>Отримуйте замовлення у найкоротші терміни завдяки нашій співпраці з провідними кур'єрськими службами.</p>
+          </div>
+      
+          <div class="delivery-cardd">
+            <h3>Доставка по всій Україні</h3>
+            <p>Доставляємо у будь-яке місто України через популярні поштові та кур'єрські служби.</p>
+          </div>
+      
+          <div class="delivery-cardd">
+            <h3>Самовивіз</h3>
+            <p>Можливість забрати товар самостійно у наших точках видачі.</p>
+          </div>
+      
+          <div class="delivery-cardd">
+            <h3>Готівкою при отриманні</h3>
+            <p>Оплачуйте товар при отриманні у відділенні пошти або у кур'єра.</p>
+          </div>
+      
+          <div class="delivery-cardd">
+            <h3>Оплата карткою</h3>
+            <p>Приймаємо онлайн-оплату через банківські картки Visa/Mastercard.</p>
+          </div>
+      
+          <div class="delivery-cardd">
+            <h3>Безготівковий розрахунок</h3>
+            <p>Юридичні особи можуть оплатити товар через банківський переказ.</p>
+          </div>
+        </div>
+      </div>
+  </main>
+            
+  <footer class="footer">
+      <div class="footer-container">
+        
+        <div class="footer-left">
+          <h2 class="footer-logog">LOGO</h2>
+          <p class="footer-address">#</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <svg width="24" height="24">
+                <use href="./media/icons.svg#instagram"></use>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-icon">
+              <svg width="24" height="24">
+                <use href="./media/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+    
+        <div class="footer-center">
+          <h3>Меню</h3>
+          <ul class="footer-menu">
+            <li><a href="#products">Продукція</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#delivery">Доставка і оплата</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-right">
+          <p class="footer-desc">Ми знаємо, як допомогти вам обрати найкраще рішення</p>
+          <a href="#consultation" class="footer-cta">Замовити консультацію</a>
+        </div>
+    
+      </div>
+    </footer>
+  
+    <script src="./js/scrollhead.js"></script>
+    <script src="./js/cart-modal.js"></script>
+    <script src="./js/search-input.js"></script>
+
+  </body>
+  </html>          
