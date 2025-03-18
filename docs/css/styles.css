@@ -1003,14 +1003,19 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
+  align-items: flex-start;
 }
 
 .footer-left {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start;
   min-width: 200px;
+  margin-top: -20px;
 }
 
-.footer-logog {
+.footer-logo {
   font-size: 24px;
   margin-bottom: 20px;
   color: var(--white);
@@ -1043,6 +1048,11 @@ img {
 .footer-menu {
   list-style: none;
   padding: 0;
+  color: var(--white);
+}
+
+.footer-menu:hover {
+  color: var(--medium-gray);
 }
 
 .footer-center h3 {

@@ -1,0 +1,24 @@
+.about {
+  text-align: center;
+  background-color: var(--light-gray);
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 60px 20px;
+  display: flex;
+}
+
+.about-container {
+  max-width: 760px;
+}
+
+.about-title {
+  font-family: var(--main-font);
+  color: var(--black);
+  letter-spacing: .2px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=index.dbfc1239.css.map */

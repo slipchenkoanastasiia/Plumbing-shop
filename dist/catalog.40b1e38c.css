@@ -1,0 +1,223 @@
+.modal-pers {
+  z-index: 1000;
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.content-pers {
+  background-color: var(--white);
+  border: 1px solid var(--medium-gray);
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+}
+
+.close-btnn {
+  cursor: pointer;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  color: var(--black);
+  background: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.close-btnn:hover {
+  color: var(--medium-gray);
+}
+
+h2 {
+  text-align: center;
+  letter-spacing: .2px;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  font-family: var(--main-font);
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="email"], input[type="password"] {
+  border: 1px solid var(--light-gray);
+  box-sizing: border-box;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 15px;
+  display: inline-block;
+}
+
+input::placeholder {
+  text-align: left;
+  letter-spacing: .2px;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 400px;
+  color: var(--black);
+  font-family: var(--main-font);
+  font-weight: normal;
+}
+
+.toggle-password {
+  cursor: pointer;
+  z-index: 1;
+  color: var(--black);
+  background: none;
+  border: none;
+  transition: all .3s;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.toggle-password:active svg path {
+  fill: var(--white);
+  transition: all .3s;
+}
+
+.password-group input[type="password"] {
+  padding-right: 40px;
+}
+
+.forgot-password {
+  text-align: right;
+  letter-spacing: .2px;
+  color: var(--black);
+  font-size: 12px;
+  line-height: 1.1;
+  font-family: var(--main-font);
+  font-weight: 400px;
+  width: 100%;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  padding: 0;
+  font-weight: normal;
+  display: block;
+}
+
+.login-btn, .register-btn, .facebook-login, .google-login {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 15px;
+  display: inline-block;
+}
+
+.login-btn {
+  text-align: center;
+  letter-spacing: .2px;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.1;
+  font-family: var(--main-font);
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  font-weight: 500 !important;
+}
+
+.login-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.register-btn {
+  text-align: center;
+  letter-spacing: .2px;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.1;
+  font-family: var(--main-font);
+  background-color: var(--black);
+  border-radius: 5px;
+  font-weight: 500 !important;
+}
+
+.register-btn:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.social-login {
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.social-login button {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.facebook-login {
+  background-color: var(--medium-gray);
+  text-align: center;
+  letter-spacing: .2px;
+  color: var(--bg-color);
+  font-size: 14px;
+  line-height: 1;
+  font-family: var(--main-font);
+  font-weight: 400 !important;
+}
+
+.facebook-login:hover {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.google-login {
+  background-color: var(--medium-gray);
+  text-align: center;
+  letter-spacing: .2px;
+  color: var(--bg-color);
+  font-size: 14px;
+  line-height: 1;
+  font-family: var(--main-font);
+  font-weight: 400 !important;
+}
+
+.google-login:hover {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.privacy-policy {
+  text-align: right;
+  letter-spacing: .2px;
+  color: var(--dark-gray-color);
+  font-size: 12px;
+  line-height: 1.1;
+  font-family: var(--primary-font);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+/*# sourceMappingURL=index.40b1e38c.css.map */

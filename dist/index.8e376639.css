@@ -997,6 +997,7 @@ img {
 .footer-container {
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1004,11 +1005,15 @@ img {
 }
 
 .footer-left {
-  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   min-width: 200px;
+  margin-top: -20px;
+  display: flex;
 }
 
-.footer-logog {
+.footer-logo {
   color: var(--white);
   margin-bottom: 20px;
   font-size: 24px;
@@ -1039,8 +1044,13 @@ img {
 }
 
 .footer-menu {
+  color: var(--white);
   padding: 0;
   list-style: none;
+}
+
+.footer-menu:hover {
+  color: var(--medium-gray);
 }
 
 .footer-center h3 {
