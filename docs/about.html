@@ -107,11 +107,66 @@
 
       <div class="footer-right">
         <p class="footer-desc">Ми знаємо, як допомогти вам обрати найкраще рішення</p>
-        <a href="#consultation" class="footer-cta">Замовити консультацію</a>
+        <a href="#consultation" class="footer-cta" id="openConsultationModal">Замовити консультацію</a>
       </div>
   
     </div>
   </footer>
+
+  <div id="consultationModal" class="consultation-modal">
+    <div class="consultation-modal-content">
+      <button class="close-consultation-modal">
+        <svg width="24" height="24">
+          <use href="./media/icons.svg#cross"></use>
+        </svg>
+      </button>
+      <h2>Замовити консультацію</h2>
+      <form id="consultationForm">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" required>
+  
+        <label for="message">Коментар</label>
+        <textarea id="message" name="message"></textarea>
+  
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const openModalBtn = document.getElementById("openConsultationModal");
+    const modal = document.getElementById("consultationModal");
+    const closeModalBtn = modal.querySelector(".close-consultation-modal");
+    const form = document.getElementById("consultationForm");
+  
+    modal.style.display = "none";
+  
+    openModalBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.style.display = "flex";
+    });
+  
+    closeModalBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      modal.style.display = "none";
+      alert("Дякуємо! Ваша заявка відправлена.");
+    });
+  });
+  </script>
   
   <div id="modalContainer">
     <div id="loginModal" class="modal-pers" style="display: none;">
@@ -179,7 +234,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
-
   
   <script src="./js/scrollhead.js"></script>
   <script src="./js/slider-wrapper.js"></script>

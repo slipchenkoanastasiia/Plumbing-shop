@@ -343,11 +343,59 @@
   
         <div class="footer-right">
           <p class="footer-desc">Ми знаємо, як допомогти вам обрати найкраще рішення</p>
-          <a href="#consultation" class="footer-cta">Замовити консультацію</a>
+          <a href="#consultation" class="footer-cta" id="openConsultationModal">Замовити консультацію</a>
         </div>
     
       </div>
     </footer>
+
+    <div id="consultationModal" class="consultation-modal">
+      <div class="consultation-modal-content">
+        <button class="close-consultation-modal">
+          <svg width="24" height="24">
+            <use href="/icons.db4458ec.svg#cross"></use>
+          </svg>
+        </button>
+        <h2>Замовити консультацію</h2>
+        <form id="consultationForm">
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required="">
+    
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" required="">
+    
+          <label for="message">Коментар</label>
+          <textarea id="message" name="message"></textarea>
+    
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </div>
+    
+    <script>document.addEventListener("DOMContentLoaded", function() {
+    const openModalBtn = document.getElementById("openConsultationModal");
+    const modal = document.getElementById("consultationModal");
+    const closeModalBtn = modal.querySelector(".close-consultation-modal");
+    const form = document.getElementById("consultationForm");
+    modal.style.display = "none";
+    openModalBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        modal.style.display = "flex";
+    });
+    closeModalBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) modal.style.display = "none";
+    });
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        modal.style.display = "none";
+        alert("\u0414\u044F\u043A\u0443\u0454\u043C\u043E! \u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u0432\u0456\u0434\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.");
+    });
+});
+
+</script>
     
     <div id="modalContainer">
       <div id="loginModal" class="modal-pers" style="display: none">

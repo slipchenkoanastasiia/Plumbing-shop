@@ -37,7 +37,7 @@ h1 {
     text-decoration: none;
     color: var(--black);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600 !important;
     line-height: 1.5; 
     letter-spacing: 0.2px;
     color: var(--medium-gray);

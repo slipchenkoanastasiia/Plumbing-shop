@@ -1125,3 +1125,97 @@ img {
   }
 }
 
+/* Модалка футер консультація */
+.consultation-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.consultation-modal-content {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-consultation-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black) !important;
+  cursor: pointer;
+}
+
+.close-consultation-modal svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+  transition: fill 0.3s ease;
+}
+
+.close-consultation-modal:hover svg {
+  fill: var(--medium-gray);
+}
+
+.consultation-modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.consultation-modal-content label {
+  text-align: left;
+  margin-top: 10px;
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.consultation-modal-content input,
+.consultation-modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid var(--white);
+  border-radius: 5px !important;
+  background: transparent;
+  color: var(--white);
+}
+
+.consultation-modal-content button {
+  margin-top: 20px;
+  padding: 10px;
+  font-family: var(--main-font);
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.consultation-modal-content button:hover {
+  background-color: var(--medium-gray);
+  color: var(--white);
+}
