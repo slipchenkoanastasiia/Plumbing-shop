@@ -91,29 +91,29 @@
       </div>
     </section>
     
-      <button class="fixed-vertical-button">Запитати</button>
+      <button class="fixed-vertical-button" id="openQuestionModal">Запитати</button>
 
       <section class="card-section">
         <p class="section-p">Продукція</p>
         <h2 class="section-title">У нас є те, що ви шукаєте для стильного інтер'єру</h2>
         
         <div class="card-container">
-        <div class="card">
+          <a href="/catalog.html" class="card">
+              <p class="card-title">Змішувачі для кухні</p>
+              <img src="/prod1.fb0ffe0d.jpg" alt="Image 1" class="card-img">
+          </a>          
+          <a href="/catalog.html" class="card">
+            <p class="card-title">Змішувачі для кухні</p>
+            <img src="/prod2.f5dd8139.jpg" alt="Image 1" class="card-img">
+        </a> 
+        <a href="/catalog.html" class="card">
           <p class="card-title">Змішувачі для кухні</p>
-          <img src="/prod1.fb0ffe0d.jpg" alt="Image 1" class="card-img">
-        </div>
-        <div class="card">
-          <p class="card-title">Змішувачі для ванни</p>
-          <img src="/prod2.f5dd8139.jpg" alt="Image 2" class="card-img">
-        </div>
-        <div class="card">
-          <p class="card-title">Душові системи</p>
-          <img src="/prod3.0c54c81c.jpg" alt="Image 3" class="card-img">
-        </div>
-        <div class="card">
-          <p class="card-title">Аксесуари</p>
-          <img src="/prod4.4d821edd.jpg" alt="Image 4" class="card-img">
-        </div>
+          <img src="/prod3.0c54c81c.jpg" alt="Image 1" class="card-img">
+      </a> 
+      <a href="/catalog.html" class="card">
+        <p class="card-title">Змішувачі для кухні</p>
+        <img src="/prod4.4d821edd.jpg" alt="Image 1" class="card-img">
+    </a> 
       </div>
       </section>
 
@@ -143,8 +143,6 @@
         </div>
       </section>
       
-
-  
       <section class="new-products">
         <h2 class="section-title">Новинки</h2>
         <div class="slider">
@@ -164,7 +162,7 @@
                         <p class="product-price">Ціна</p>
                     </div>
                     <div class="button-container">
-                      <button class="details-btn">детальніше</button>
+                      <a href="/product.html" class="details-btn">детальніше</a>
                   </div>
                 </div>
                 
@@ -175,7 +173,7 @@
                       <p class="product-price">Ціна</p>
                   </div>
                   <div class="button-container">
-                    <button class="details-btn">детальніше</button>
+                    <a href="/product.html" class="details-btn">детальніше</a>
                 </div>
               </div>
 
@@ -186,7 +184,7 @@
                         <p class="product-price">Ціна</p>
                     </div>
                     <div class="button-container">
-                      <button class="details-btn">детальніше</button>
+                      <a href="/product.html" class="details-btn">детальніше</a>
                   </div>
                 </div>
                     
@@ -246,7 +244,7 @@
                       <p class="special-product-price">Ціна</p>
                   </div>
                   <div class="special-button-container">
-                    <button class="special-details-btn">детальніше</button>
+                    <a href="/product.html" class="details-btn">детальніше</a>
                   </div>
                 </div>
               
@@ -257,7 +255,7 @@
                       <p class="special-product-price">Ціна</p>
                   </div>
                   <div class="special-button-container">
-                    <button class="special-details-btn">детальніше</button>
+                    <a href="/product.html" class="details-btn">детальніше</a>
                   </div>
                 </div>
     
@@ -268,7 +266,7 @@
                       <p class="special-product-price">Ціна</p>
                   </div>
                   <div class="special-button-container">
-                    <button class="special-details-btn">детальніше</button>
+                    <a href="/product.html" class="details-btn">детальніше</a>
                   </div>
                 </div>
     
@@ -453,6 +451,59 @@
             if (event.target === modal) modal.style.display = 'none';
         });
     } else console.error("\u041D\u0435 \u0437\u043D\u0430\u0439\u0434\u0435\u043D\u043E \u043E\u0434\u0438\u043D \u0456\u0437 \u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432: \u043A\u043D\u043E\u043F\u043A\u0438 \u0432\u0456\u0434\u043A\u0440\u0438\u0442\u0442\u044F, \u043C\u043E\u0434\u0430\u043B\u043A\u0430 \u0430\u0431\u043E \u043A\u043D\u043E\u043F\u043A\u0430 \u0437\u0430\u043A\u0440\u0438\u0442\u0442\u044F.");
+});
+
+</script>
+
+<div id="questionModal" class="question-modal">
+  <div class="question-modal-content">
+    <button class="close-question-modal">
+      <svg width="24" height="24">
+        <use href="/icons.db4458ec.svg#cross"></use>
+      </svg>
+    </button>
+    <h2>Задати питання</h2>
+    <form id="questionForm">
+      <label for="questionName">Ім'я</label>
+      <input type="text" id="questionName" name="name" required="">
+
+      <label for="questionPhone">Телефон</label>
+      <input type="tel" id="questionPhone" name="phone" required="">
+
+      <label for="questionMessage">Ваше питання</label>
+      <textarea id="questionMessage" name="message"></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const openQuestionModalBtn = document.getElementById("openQuestionModal");
+    const questionModal = document.getElementById("questionModal");
+    const closeQuestionModalBtn = questionModal.querySelector(".close-question-modal");
+    const questionForm = document.getElementById("questionForm");
+    // Ховаємо модалку при завантаженні сторінки
+    questionModal.style.display = "none";
+    // Відкриваємо модалку при натисканні на кнопку
+    openQuestionModalBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        questionModal.style.display = "flex";
+    });
+    // Закриваємо модалку при натисканні на хрестик
+    closeQuestionModalBtn.addEventListener("click", function() {
+        questionModal.style.display = "none";
+    });
+    // Закриваємо модалку при кліку поза її межами
+    window.addEventListener("click", function(event) {
+        if (event.target === questionModal) questionModal.style.display = "none";
+    });
+    // Закриваємо модалку після відправлення форми
+    questionForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        questionModal.style.display = "none";
+        alert("\u0414\u044F\u043A\u0443\u0454\u043C\u043E! \u0412\u0430\u0448\u0435 \u043F\u0438\u0442\u0430\u043D\u043D\u044F \u0432\u0456\u0434\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E.");
+    });
 });
 
 </script>
