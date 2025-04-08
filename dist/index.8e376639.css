@@ -1121,18 +1121,6 @@ img {
   color: var(--white);
 }
 
-@media (width <= 768px) {
-  .footer-container {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-left, .footer-center, .footer-right {
-    margin-bottom: 20px;
-  }
-}
-
 .consultation-modal {
   z-index: 1000;
   background-color: #00000080;

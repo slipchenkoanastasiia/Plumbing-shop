@@ -24,6 +24,11 @@
 <body>
       
   <header class="header">
+    <button class="burger" id="burger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <a href="./index.html" class="logo-link">
       <div class="logo">Logo</div>
   </a>
@@ -62,7 +67,6 @@
         </svg>
       </a>
     </div>
-    
   </header>
   
     <section class="image-slider">
@@ -369,6 +373,15 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const burgerBtn = document.getElementById('burger-btn');
+      const nav = document.querySelector('nav');
+    
+      burgerBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>
     
     <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -499,28 +512,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeQuestionModalBtn = questionModal.querySelector(".close-question-modal");
     const questionForm = document.getElementById("questionForm");
   
-    // Ховаємо модалку при завантаженні сторінки
     questionModal.style.display = "none";
   
-    // Відкриваємо модалку при натисканні на кнопку
     openQuestionModalBtn.addEventListener("click", function (event) {
       event.preventDefault();
       questionModal.style.display = "flex";
     });
   
-    // Закриваємо модалку при натисканні на хрестик
     closeQuestionModalBtn.addEventListener("click", function () {
       questionModal.style.display = "none";
     });
   
-    // Закриваємо модалку при кліку поза її межами
     window.addEventListener("click", function (event) {
       if (event.target === questionModal) {
         questionModal.style.display = "none";
       }
     });
   
-    // Закриваємо модалку після відправлення форми
     questionForm.addEventListener("submit", function (event) {
       event.preventDefault();
       questionModal.style.display = "none";
