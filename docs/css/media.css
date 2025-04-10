@@ -671,7 +671,158 @@
     margin-bottom: 20px;
   }
 
-  }
+
+/* Стилі для фільтрів */
+
+.filters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important; /* Замість 100vw для мобільних пристроїв */
+  height: 100%; /* 100% для мобільних */
+  background-color: rgba(255, 255, 255, 0.9); /* Прозорий фон */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Вирівнюємо вміст по верху */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  margin: 0; /* Важливо, щоб не було зовнішніх відступів */
+  padding: 60px; /* Теж важливо, щоб не було внутрішніх відступів */
+  overflow-y: auto; /* Додаємо прокручування, якщо контент більше висоти екрану */
+}
+
+.filters.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стилі для кнопки "Застосувати" */
+.filters .apply-filters-btn {
+  position: absolute;
+  bottom: 60px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters .apply-filters-btn:hover {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+
+/* Стилі для груп фільтрів */
+.filter-group {
+    width: 100% !important; /* Встановлюємо ширину 100% */
+    margin: 15px 0;
+    font-size: 16px; /* Зменшуємо шрифт для мобільної версії */
+}
+
+/* Стилі для вибору фільтру */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%; /* Встановлюємо ширину на 100% */
+}
+
+.customs-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.customs-select span {
+    font-size: 14px;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.custom-dropdown {
+    display: none; /* Сховані за замовчуванням */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100% !important;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 2000;
+}
+
+.custom-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.custom-dropdown li:hover {
+    background-color: var(--light-gray);
+}
+
+.custom-select-wrapper .customs-select:hover .custom-dropdown {
+    display: block;
+}
+
+/* Вартість фільтра */
+.price-from, .price-to {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.price-from input, .price-to input {
+    width: 50%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.price-controls svg {
+    cursor: pointer;
+}
+
+/* Кнопки фільтрів вартості */
+.price-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.price-buttons button {
+    padding: 10px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price-buttons button:hover {
+    background-color: var(--light-gray);
+    color: var(--black);
+}
+
+
+}
+  
+
+ 
   
   
 
@@ -680,6 +831,3 @@
       display: none !important;
     }
   }
-  
-
-  

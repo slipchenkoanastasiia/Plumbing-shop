@@ -110,9 +110,10 @@
 });
 
           </script>
+          
 
             <div class="content">
-                <div class="filters">
+                <div class="filters" id="filters">
                     <form>
                       <div class="filter-group">
                         <label for="length">Категорія</label>
@@ -205,7 +206,7 @@
                       </div>
                   </div>
                   
-                  <button class="apply-filters-btn" type="submit">Застосувати</button>
+                  <button class="apply-filters-btn" type="button" onclick="closeFilters()">Застосувати</button>
               </div>    
               <div class="product-list-container">
                 <div class="product-list">
@@ -492,6 +493,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
+
+<script>
+// Функція для відкриття фільтрів
+function openFilters() {
+    const filters = document.getElementById('filters');
+    filters.classList.add('open');
+}
+
+// Функція для закриття фільтрів
+function closeFilters() {
+    const filters = document.getElementById('filters');
+    filters.classList.remove('open');
+}
+
+// Приклад автоматичного відкриття фільтрів через 1 секунду після завантаження сторінки
+window.onload = function() {
+    setTimeout(openFilters, 1000);  // Фільтри відкриються через 1 секунду після завантаження сторінки
+};
+
+
+
+
+</script>
+
+
 
   <script src="./js/scrollhead.js"></script>
   <script src="./js/cart-modal.js"></script>
