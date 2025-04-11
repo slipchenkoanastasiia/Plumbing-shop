@@ -432,24 +432,28 @@ option:hover {
 }
 
 .catalog-first {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 елементи в рядку для великих екранів */
+    gap: 10px;
     margin-bottom: -10px;
 }
-  
+
 .catalog-second {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
-    justify-content: space-between; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 елементи в рядку для великих екранів */
+    gap: 10px;
     margin-bottom: -10px;
+}
+
+.catalog-first, .catalog-second {
+    display: grid;
+    gap: 10px; 
+    grid-template-columns: repeat(3, 1fr); /* 3 картки в ряд по дефолту */
 }
 
 .catalog-third {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
 }

@@ -1,4 +1,11 @@
 @media (max-width: 768px) {
+
+  .container {
+    padding: 0;
+    margin: 0 10px;
+    width: auto;
+  }
+
     /* Хедер */
     .icons .icon:not(#cart-icon) {
       display: none;
@@ -678,19 +685,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100% !important; /* Замість 100vw для мобільних пристроїв */
-  height: 100%; /* 100% для мобільних */
-  background-color: rgba(255, 255, 255, 0.9); /* Прозорий фон */
+  width: 100% !important; 
+  height: 100%; 
+  background-color: rgba(255, 255, 255, 0.9); 
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Вирівнюємо вміст по верху */
+  align-items: flex-start; 
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  margin: 0; /* Важливо, щоб не було зовнішніх відступів */
-  padding: 60px; /* Теж важливо, щоб не було внутрішніх відступів */
-  overflow-y: auto; /* Додаємо прокручування, якщо контент більше висоти екрану */
+  margin: 0; 
+  padding: 60px; 
+  overflow-y: auto; 
+}
+
+.filters form {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .filters.open {
@@ -698,7 +710,6 @@
   visibility: visible;
 }
 
-/* Стилі для кнопки "Застосувати" */
 .filters .apply-filters-btn {
   position: absolute;
   bottom: 60px;
@@ -711,6 +722,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: -110px;
 }
 
 .filters .apply-filters-btn:hover {
@@ -718,18 +730,14 @@
   color: var(--black);
 }
 
-
-/* Стилі для груп фільтрів */
 .filter-group {
-    width: 100% !important; /* Встановлюємо ширину 100% */
-    margin: 15px 0;
-    font-size: 16px; /* Зменшуємо шрифт для мобільної версії */
+  margin: 15px 0;
+  font-size: 16px; 
 }
 
-/* Стилі для вибору фільтру */
 .custom-select-wrapper {
     position: relative;
-    width: 100%; /* Встановлюємо ширину на 100% */
+    width: 100% !important; 
 }
 
 .customs-select {
@@ -752,12 +760,12 @@
 }
 
 .custom-dropdown {
-    display: none; /* Сховані за замовчуванням */
+    display: none; 
     position: absolute;
     top: 100%;
     left: 0;
     width: 100% !important;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-height: 200px;
@@ -768,6 +776,7 @@
 .custom-dropdown li {
     padding: 10px;
     cursor: pointer;
+    width: 100% !important;
 }
 
 .custom-dropdown li:hover {
@@ -778,7 +787,6 @@
     display: block;
 }
 
-/* Вартість фільтра */
 .price-from, .price-to {
     display: flex;
     justify-content: space-between;
@@ -796,7 +804,6 @@
     cursor: pointer;
 }
 
-/* Кнопки фільтрів вартості */
 .price-buttons {
     display: flex;
     flex-direction: column;
@@ -818,12 +825,143 @@
     color: var(--black);
 }
 
+.right-content {
+  margin-top: -90px; 
+  gap: 5px; 
+  align-items: flex-start;
+}
+
+.show-filters-btn {
+  padding: 0;
+}
+
+.show-filters-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.catalog-first .product-item .image-wrapper img {
+  width: 100%; 
+  height: 340px; 
+  object-fit: cover;
+}
+
+.catalog-first .product-item {
+  margin-bottom: 20px;
+}
+
+.product-list-container {
+  margin-top: -20px;
+}
+
+.catalog-first .product-item .title-row,
+.catalog-first .product-item .caption-row {
+  margin-top: 0px; 
+  margin-bottom: 5px; 
+}
+
+.catalog-first .product-item .title-row {
+  margin-top: -35px;
+}
+
+.catalog-first .product-item .caption-row {
+  margin-bottom: 15px; 
+}
+
+.catalog-first, .catalog-second {
+  grid-template-columns: repeat(2, 1fr) !important; 
+}
+
+.catalog-first .product-item:nth-child(3),
+.catalog-second .product-item:nth-child(3) {
+  display: none; 
+}
+
+.catalog-card {
+  width: 100%; 
+  height: 380px !important; 
+  object-fit: cover;
+}
+
+.catalog-second .product-item .image-wrapper img {
+  width: 100%; 
+  height: 340px; 
+  object-fit: cover;
+}
+
+.catalog-second .product-item .title-row,
+.catalog-second .product-item .caption-row {
+  margin-top: 0px; 
+  margin-bottom: 5px;
+}
+
+.catalog-second .product-item .title-row {
+  margin-top: -35px;
+}
+
+.catalog-second .product-item .caption-row {
+  margin-bottom: 15px; 
+}
+
+.prod-therd {
+  display: none;
+}
+
+.catalog-third {
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px;
+  margin-top: -30px; 
+}
+
+.catalog-left {
+  align-items: center;
+  flex-basis: 100%; 
+  max-width: none;
+  margin-top: 0;
+}
+
+.catalog-text {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: auto; 
+  width: 100%; 
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 100%; 
+}
+
+#show-more-btn {
+  width: 100%; 
+  margin: 10px 0;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.prev-page, .next-page {
+  padding: 10px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
 
 }
-  
-
- 
-  
   
 
   @media screen and (min-width: 769px) {

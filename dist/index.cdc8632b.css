@@ -431,11 +431,10 @@ option:hover {
 }
 
 .catalog-first, .catalog-second {
-  flex-wrap: wrap;
-  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: -10px;
-  display: flex;
+  display: grid;
 }
 
 .catalog-third {
