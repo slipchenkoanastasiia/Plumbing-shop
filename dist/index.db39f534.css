@@ -899,6 +899,127 @@
     padding: 10px;
     display: flex;
   }
+
+  .product-list-container {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto 80px;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    width: 100% !important;
+  }
+
+  .product-cardg {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-gallery {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .product-infog {
+    height: auto;
+    padding: 15px;
+  }
+
+  .product-titleg, .product-priceg, .product-articleg {
+    font-size: 14px;
+  }
+
+  .product-descriptiong {
+    font-size: 12px;
+  }
+
+  .add-to-cartg {
+    width: 100%;
+    padding: 12px;
+    display: block;
+  }
+
+  .delivery-grid {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    display: flex;
+    padding: 0 16px !important;
+  }
+
+  .delivery-card {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 320px;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .delivery-text {
+    align-self: center;
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .delivery-container h2, .delivery-container .delivery-subtitle {
+    text-align: center;
+  }
+
+  .delivery-text h2 {
+    font-size: 24px;
+  }
+
+  .delivery-subtitle {
+    font-size: 14px;
+  }
+
+  .related-products {
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+  }
+
+  .related-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .related-item {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .related-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .related-item div {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .related-products {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+  }
 }
 
 @media screen and (width >= 769px) {
