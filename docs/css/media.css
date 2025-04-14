@@ -627,6 +627,8 @@
     animation: none;
   }
 
+
+
   .review-text {
     margin-bottom: 8px;
     font-family: var(--accent-font);
@@ -651,6 +653,7 @@
     width: 90%; 
     margin-left: auto;
     margin-right: auto;
+    gap: 24px;
   }
 
   .top-left, .top-right, .bottom-left, .bottom-right {
@@ -962,41 +965,46 @@
 
 /* Сторінка продукту */
 
+.product-page .right-content {
+  display: none;
+}
+
+
 .product-list-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 100% !important; /* Зробимо ширину 100% */
-  padding-left: 0px;
-  padding-right: 0px; /* Додаємо правий відступ */
-  margin: 0 auto; /* Центруємо контейнер */
+  width: 100% !important; 
+  padding-right: 0px; 
+  margin: 0 auto;
   margin-bottom: 80px;
+  margin-top: -60px;
 }
 
 .product-cardg {
-  width: 100%; /* Картка займає всю ширину */
-  height: auto; /* Дозволяємо висоті адаптуватися */
+  width: 100%; 
+  height: auto; 
 }
 
 .product-gallery {
-  width: 100%; /* Дозволяємо галереї займати всю ширину */
+  width: 100%; 
   height: auto;
-  margin: 0; /* Висота адаптується */
+  margin: 0; 
 }
 
 .product-infog {
-  height: auto; /* Висота адаптується */
-  padding: 15px; /* Зменшуємо відступи для мобільної версії */
+  height: auto; 
+  padding: 15px; 
 }
 
 .product-titleg,
 .product-priceg,
 .product-articleg {
-  font-size: 14px; /* Можна зменшити шрифт на мобільних */
+  font-size: 14px; 
 }
 
 .product-descriptiong {
-  font-size: 12px; /* Теж можна зменшити шрифт на мобільних */
+  font-size: 12px; 
 }
 
 .add-to-cartg {
@@ -1010,13 +1018,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 16px !important; /* трішки бокового відступу для мобілок */
+  padding: 0 16px !important; 
   box-sizing: border-box;
 }
 
 .delivery-card {
   width: 90%;
-  max-width: 320px; /* обмежуємо ширину на великих екранах */
+  max-width: 320px; 
   margin: 10px auto;
   padding: 20px;
   box-sizing: border-box;
@@ -1026,7 +1034,7 @@
   align-self: center;
   width: 100%;
 
-  text-align: center !important; /* якщо хочеш, щоб ще й текст був по центру */
+  text-align: center !important; 
 }
 
 .delivery-container h2,
@@ -1042,47 +1050,29 @@
   font-size: 14px;
 }
 
-.related-products {
-  width: 100% !important;
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: border-box;
-}
-
 .related-list {
-  display: flex;
-  flex-direction: column;   /* Картки одна під одною */
-  align-items: stretch;     /* Картки займають всю ширину */
-  gap: 20px;                /* Простір між картками */
-  padding: 0;
-  margin: 0;
-  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
 }
 
 .related-item {
-  width: 100% !important;         /* Картка на всю ширину */
-  max-width: 100%;                /* Забираємо обмеження */
-  box-sizing: border-box;         /* Враховуємо відступи */
+  width: 100% !important;
+  max-width: 100% !important; 
+  flex: none !important;     
+  aspect-ratio: auto;        
 }
 
 .related-item img {
-  width: 100%;              /* Зображення на всю ширину картки */
-  height: auto;             /* Пропорційна висота */
-  display: block;           /* Виключаємо пробіли */
+  height: auto; 
 }
 
 .related-item div {
-  text-align: center;       /* Текст в середині картки */
-  font-size: 14px;
+  position: static;
+  transform: none;
+  text-align: center;
   margin-top: 10px;
 }
-
-/* Забираємо бокові падінги, якщо є */
-.related-products {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 
 .contact-info {
   flex-direction: column;
@@ -1096,5 +1086,78 @@
   @media screen and (min-width: 769px) {
     .burger {
       display: none !important;
+    }
+
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+   
+    .menu {
+      gap: 2px;
+    }
+
+    .header.scrolled .menu a {
+      font-size: 12px;
+      gap: 3px;
+    }
+
+    .slide img {
+      height: 630px;
+    }
+
+    .text-overlay h2 {
+      font-size: 65px;
+    }
+
+    .text-overlay p {
+      font-size: 20px;
+    } 
+
+    .card-title {
+      font-size: 14px;
+    }
+
+    .product-brands {
+      margin-bottom: 60px;
+    }
+
+    .product-card {
+      height: 400px;
+    }
+
+    .card-new {
+      padding: 20px; /* або ще менше, наприклад 16px */
+    }
+
+    .card-title-new {
+      font-size: 16px;
+    }
+
+    .special-product-card {
+      height: 400px;
+    }
+    .top-left { 
+      top: 5%;
+      left: 10%;
+      --rotation: 10deg;
+    }
+    .top-right { 
+      top: 5%;
+      right: 10%;
+      --rotation: -10deg;
+    }
+    .bottom-left { 
+      bottom: 5%;
+      left: 10%;
+      --rotation: -10deg;
+    }
+    .bottom-right { 
+      bottom: 5%;
+      right: 10%;
+      --rotation: 10deg;
+    }
+
+    .footer-cta {
+      font-size: 15px;
     }
   }

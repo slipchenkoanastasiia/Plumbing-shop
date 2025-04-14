@@ -599,6 +599,7 @@
   }
 
   .review-card {
+    gap: 24px;
     width: 90%;
     margin-bottom: 20px;
     margin-left: auto;
@@ -900,11 +901,14 @@
     display: flex;
   }
 
+  .product-page .right-content {
+    display: none;
+  }
+
   .product-list-container {
     flex-direction: column;
     gap: 30px;
-    margin: 0 auto 80px;
-    padding-left: 0;
+    margin: -60px auto 80px;
     padding-right: 0;
     display: flex;
     width: 100% !important;
@@ -975,44 +979,28 @@
     font-size: 14px;
   }
 
-  .related-products {
-    box-sizing: border-box;
-    padding-left: 0;
-    padding-right: 0;
-    width: 100% !important;
-  }
-
   .related-list {
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
   }
 
   .related-item {
-    box-sizing: border-box;
-    max-width: 100%;
+    aspect-ratio: auto;
+    flex: none !important;
     width: 100% !important;
+    max-width: 100% !important;
   }
 
   .related-item img {
-    width: 100%;
     height: auto;
-    display: block;
   }
 
   .related-item div {
     text-align: center;
     margin-top: 10px;
-    font-size: 14px;
-  }
-
-  .related-products {
-    padding-left: 0;
-    padding-right: 0;
+    position: static;
+    transform: none;
   }
 
   .contact-info {
@@ -1025,6 +1013,81 @@
 @media screen and (width >= 769px) {
   .burger {
     display: none !important;
+  }
+}
+
+@media screen and (width >= 768px) and (width <= 1024px) {
+  .menu {
+    gap: 2px;
+  }
+
+  .header.scrolled .menu a {
+    gap: 3px;
+    font-size: 12px;
+  }
+
+  .slide img {
+    height: 630px;
+  }
+
+  .text-overlay h2 {
+    font-size: 65px;
+  }
+
+  .text-overlay p {
+    font-size: 20px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .product-brands {
+    margin-bottom: 60px;
+  }
+
+  .product-card {
+    height: 400px;
+  }
+
+  .card-new {
+    padding: 20px;
+  }
+
+  .card-title-new {
+    font-size: 16px;
+  }
+
+  .special-product-card {
+    height: 400px;
+  }
+
+  .top-left {
+    --rotation: 10deg;
+    top: 5%;
+    left: 10%;
+  }
+
+  .top-right {
+    --rotation: -10deg;
+    top: 5%;
+    right: 10%;
+  }
+
+  .bottom-left {
+    --rotation: -10deg;
+    bottom: 5%;
+    left: 10%;
+  }
+
+  .bottom-right {
+    --rotation: 10deg;
+    bottom: 5%;
+    right: 10%;
+  }
+
+  .footer-cta {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=index.db39f534.css.map */
