@@ -1092,8 +1092,22 @@
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
    
+    /* Головна сторінка */
     .menu {
       gap: 2px;
+    }
+
+    .menu a {
+      font-size: 14px;
+    }
+
+    .icon svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .icons {
+      gap: 13px;
     }
 
     .header.scrolled .menu a {
@@ -1103,6 +1117,15 @@
 
     .slide img {
       height: 630px;
+    }
+
+    .fixed-vertical-button { 
+      top: 45vh; 
+    }
+
+    .text-overlay {
+      top: 60%;
+      left: 20%;
     }
 
     .text-overlay h2 {
@@ -1118,7 +1141,23 @@
     }
 
     .product-brands {
+      margin-bottom: 50px;
+    }
+
+    .card-section {
       margin-bottom: 60px;
+    }
+
+    .new-products {
+      padding: 70px 56px 110px;
+    }
+
+    .card-container-new {
+      margin: 65px 17px;
+    }
+
+    .special-offers {
+      padding-top: 70px;
     }
 
     .product-card {
@@ -1126,7 +1165,7 @@
     }
 
     .card-new {
-      padding: 20px; /* або ще менше, наприклад 16px */
+      padding: 20px; 
     }
 
     .card-title-new {
@@ -1160,4 +1199,62 @@
     .footer-cta {
       font-size: 15px;
     }
+
+    /* Сторінка продукції */
+    .image-wrapper img {
+       height: 340px !important;
+    }
+
+    .catalog-first .product-item .title-row {
+      margin-top: -30px;
+    }
+
+    .catalog-card {
+      height: 380px !important; 
+    }
+    
+    .catalog-second .product-item .image-wrapper img { 
+      height: 340px; 
+    }
+    
+    .catalog-second .product-item .title-row {
+      margin-top: -30px;
+    }
+
+    .prod-therd .product-item .image-wrapper img {
+      height: 340px; 
+    }
+
+    .prod-therd .title-row {
+      margin-top: -30px;
+    }
+    
+    /* Сторінка товару */
+    
+    .product-page .right-content {
+      display: none;
+    }
+
+    .product-cardg {
+      height: 410px !important; 
+    }
+
+    .related-list {
+      gap: 14px !important;
+      justify-content: center !important;
+    }
+  
+    .related-item {
+      flex: 0 0 calc(33.33% - 10px) !important; 
+      max-width: calc(33.33% - 10px) !important; 
+      aspect-ratio: 3 / 4 !important;
+    }
+  
+    .related-item div {
+      font-size: 18px !important;
+      padding: 8px 12px !important;
+    }
+
+       /* Сторінка про нас */
+
   }
