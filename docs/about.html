@@ -24,6 +24,11 @@
 <body>
       
   <header class="header">
+    <button class="burger" id="burger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <a href="./index.html" class="logo-link">
       <div class="logo">Logo</div>
   </a>
@@ -112,6 +117,15 @@
   
     </div>
   </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burger-btn');
+    const nav = document.querySelector('nav');
+  
+    burgerBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 
   <div id="consultationModal" class="consultation-modal">
     <div class="consultation-modal-content">

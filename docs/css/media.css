@@ -564,40 +564,44 @@
   /* Секція відгуків */
   .reviews-section {
     padding: 60px 20px;
-    height: auto; 
-  }
-
-  .reviews-wrapper {
-    position: relative;
-    width: 100%;
     height: auto;
   }
 
+  .reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
   .center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    word-wrap: break-word;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
     padding: 0 20px;
-    width: 90%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .main-text {
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: bold;
     color: #333;
   }
 
   .review-card {
-    width: 80%; 
+    width: 90%;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    transform: rotate(var(--rotation));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 0 auto;
   }
 
   .top-left { 
@@ -623,18 +627,12 @@
     --rotation: 5deg; 
   }
 
-  .reviews-section:hover .review-card {
-    animation: none;
-  }
-
-
 
   .review-text {
     margin-bottom: 8px;
     font-family: var(--accent-font);
-    text-decoration: none;
     color: var(--black);
-    font-size: 14px; 
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0.1px;
@@ -647,42 +645,29 @@
     color: var(--medium-gray);
   }
 
-  .review-card {
-    position: relative;
-    margin-bottom: 20px;
-    width: 90%; 
-    margin-left: auto;
-    margin-right: auto;
-    gap: 24px;
-  }
-
-  .top-left, .top-right, .bottom-left, .bottom-right {
-    position: relative;
-    top: auto;
-    left: 0;
-    right: 0;
-    transform: rotate(var(--rotation)); 
-  }
-
-/* Стилі для футера */
+  /* Стилі для футера */
 .footer-left {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.footer-container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .footer-left, .footer-center, .footer-right {
-    margin-bottom: 20px;
-  }
+.footer-left, .footer-center, .footer-right {
+  margin-bottom: 20px;
+}
 
 
 /* Стилі для фільтрів */
+
+.product-page .right-content {
+  display: none;
+}
 
 .filters {
   position: fixed;
@@ -1080,6 +1065,50 @@
   font-size: 16px;
 }
 
+/* Стилі для сторінки про нас */
+.about {
+  min-height: 100vh !important;
+  padding: 40px 20px; 
+}
+
+.about-title {
+  font-size: 24px !important;
+  line-height: 1.4;
+  width: 300px;
+}
+
+/* Стилі для сторінки контакти */
+.contact-container {
+  min-height: 100vh !important;
+  margin-top: 230px !important;
+}
+
+/* Стилі для сторінки доставка */
+.delivery-containerd {
+margin-top: 90px !important;
+}
+
+.delivery-gridd {
+  grid-template-columns: repeat(2, 1fr) !important; 
+}
+
+.delivery-cardd {
+  width: 100%;
+  height: 240px !important;
+}
+
+.delivery-cardd:nth-child(5),
+.delivery-cardd:nth-child(6) {
+    grid-column: span 1; 
+}
+
+.delivery-cardd h3 {
+  font-size: 14px !important;
+  position: absolute; 
+  bottom: 10% !important;
+  left: 40%; 
+  transform: translateX(-50%);
+}
 }
   
 
@@ -1256,5 +1285,38 @@
     }
 
        /* Сторінка про нас */
+       .about {
+        min-height: 75vh !important;
+      }
+       /* Стилі для сторінки контакти */
+.contact-container {
+  margin-top: 230px !important;
+}
 
+/* Стилі для сторінки доставка */
+.delivery-containerd {
+margin-top: 180px !important;
+}
+
+  .delivery-gridd {
+    grid-template-columns: repeat(2, 1fr) !important; 
+  }
+  
+  .delivery-cardd {
+    width: 100%;
+    height: 340px !important;
+  }
+  
+  .delivery-cardd:nth-child(5),
+  .delivery-cardd:nth-child(6) {
+      grid-column: span 1; 
+  }
+  
+  .delivery-cardd h3 {
+    font-size: 24px !important;
+    position: absolute; 
+    bottom: 10% !important;
+    left: 40%; 
+    transform: translateX(-50%);
+  }
   }
