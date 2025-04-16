@@ -294,6 +294,7 @@ option:hover {
     flex-wrap: wrap;
     gap: 10px;
     width: 100%; 
+    border-radius: 5px;
 }
   
 .price-from svg, .price-to svg {
@@ -351,6 +352,16 @@ option:hover {
 .filters form button[type="submit"]:hover {
     background-color: var(--light-gray);
     color: var(--black);
+}
+
+.apply-filters-btn {
+    background-color: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.apply-filters-btn:hover {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
 }
 
 /* Стилі для карток товарів */
