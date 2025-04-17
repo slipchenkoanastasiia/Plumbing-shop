@@ -211,6 +211,10 @@ img {
   fill: var(--white);
 }
 
+.burger-socials {
+  display: none;
+}
+
 .cart-modal {
   background-color: var(--white);
   z-index: 1000;

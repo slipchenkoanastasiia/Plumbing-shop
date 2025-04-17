@@ -218,6 +218,10 @@ img {
   fill: var(--white);
 }
 
+.burger-socials {
+  display: none;
+}
+
 /* Модальне вікно для корзинки */
 .cart-modal {
   position: fixed;
