@@ -5,7 +5,7 @@
     padding: 0;
   }
 
-  .icons .icon:not(#cart-icon) {
+  .icons .icon:not(#icon) {
     display: none;
   }
 
@@ -1030,6 +1030,72 @@
     transform: translateX(-50%);
     font-size: 14px !important;
     bottom: 10% !important;
+  }
+
+  .search-cont {
+    min-height: 100vh;
+    margin-bottom: -110px !important;
+  }
+
+  .close-btnt {
+    cursor: pointer;
+    z-index: 10;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 35px !important;
+  }
+
+  .search-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin-top: -30px;
+    padding: 0 14px;
+    position: relative;
+  }
+
+  .search-input {
+    border-radius: 5px;
+    width: 100%;
+    padding: 14px 45px 14px 16px;
+    font-size: 15px;
+  }
+
+  .search-icon {
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 360px;
+    transform: translateY(-50%);
+  }
+
+  .close-btnt {
+    top: 30px;
+    right: 20px;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+    padding: 0 14px;
+    display: grid;
+  }
+
+  .card-title {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .card-img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
   }
 }
 
