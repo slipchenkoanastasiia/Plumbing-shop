@@ -441,6 +441,48 @@ option:hover {
   font-weight: 700;
 }
 
+.heart-btn {
+  cursor: pointer;
+  z-index: 5;
+  background: none;
+  border: none;
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.price-row {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+.basket-btn {
+  cursor: pointer;
+  z-index: 5;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.heart-btn:hover, .basket-btn:hover {
+  background-color: #00000080;
+  border-radius: 50%;
+}
+
+.heart-btn svg, .basket-btn svg {
+  fill: #0000;
+  stroke: var(--black);
+  transition: all .3s;
+}
+
+.heart-btn.active svg, .basket-btn.active svg {
+  fill: #fff;
+  stroke: #fff;
+}
+
 .catalog-first, .catalog-second {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;

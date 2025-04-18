@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.product-page .right-content {
+  display: none;
+}
+
 .product-cardg {
   border-radius: 10px;
   width: 100%;
@@ -137,6 +141,57 @@
 
 .product-cardg:hover .add-to-cartg {
   display: block;
+}
+
+.product-characteristics {
+  margin-top: 20px;
+}
+
+.characteristic {
+  justify-content: space-between;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.characteristic-label {
+  font-weight: bold;
+}
+
+.characteristic-value {
+  color: #555;
+}
+
+.product-reviews {
+  margin-top: 30px;
+}
+
+.product-reviews h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.review-form {
+  flex-direction: column;
+  display: flex;
+}
+
+.review-form textarea {
+  resize: vertical;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.review-form button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  align-self: flex-start;
+  padding: 8px 16px;
+}
+
+.review-form button:hover {
+  background-color: #45a049;
 }
 
 .related-products {
