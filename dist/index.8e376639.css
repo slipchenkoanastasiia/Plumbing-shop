@@ -217,15 +217,22 @@ img {
 
 .cart-modal {
   background-color: var(--white);
-  z-index: 1000;
-  border-radius: 5px;
-  width: 240px;
-  padding: 20px;
+  color: var(--black);
+  z-index: 9999;
+  font-family: var(--main-font, sans-serif);
+  letter-spacing: .3px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: .7;
+  animation: 2s ease-in-out forwards fadeInOut;
   display: none;
   position: fixed;
   top: 10px;
-  right: 10px;
-  box-shadow: 0 2px 10px #0000001a;
+  right: 20px;
+  box-shadow: 0 4px 8px #0000001a;
 }
 
 .cart-modal p {
@@ -239,25 +246,26 @@ img {
   text-decoration: none;
 }
 
-.closee-btn {
-  cursor: pointer;
-  background: none;
-  border: none;
-  position: absolute;
-  top: 7px;
-  right: 7px;
-}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 
-.closee-btn svg {
-  width: 100%;
-  height: 100%;
-  stroke-width: 1px !important;
-  width: 13px !important;
-  height: 13px !important;
-}
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-.closee-btn svg:hover {
-  fill: var(--medium-gray);
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 
 .link-icon {

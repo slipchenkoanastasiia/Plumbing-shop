@@ -371,8 +371,6 @@ option:hover {
     position: relative;
     border-radius: 5px; 
     overflow: hidden; 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
     margin-bottom: 50px;
 }
 
@@ -394,25 +392,8 @@ option:hover {
 
 .image-wrapper {
     cursor: pointer;
-}
-
-.catalog-img-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-    border-radius: inherit; 
-    pointer-events: none;
-}
-
-.catalog-card:hover .catalog-img-wrapper::after {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: inherit;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    display: block;
 }
 
 .catalog-info {
@@ -442,51 +423,104 @@ option:hover {
     color: var(--white);
 }
 
+.catalog-card:hover .catalog-img-wrapper::after {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 /* Cтілі для свг сердечка та корзинки */
 
 .heart-btn {
     position: absolute;
-    top: 10px;  
-    right: 10px;
+    top: 10px;
+    left: 110px;
     background: transparent;
     border: none;
     padding: 4px;
     cursor: pointer;
-    z-index: 5; 
-}
+    z-index: 5;
+  }
 
-.price-row {
+  .price-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
-
-.basket-btn {
+  
+  .caption-row {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .basket-btn {
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 4px;
-    z-index: 5; 
-}
+    margin-left: 200px;
+  }
+  
+  .basket-btn.active svg {
+    animation: pulse-animation 0.6s ease-out;
+  }
 
-.heart-btn:hover,
-.basket-btn:hover {
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 50%; 
-}
-
-.heart-btn svg, .basket-btn svg {
-    fill: transparent;
+  .heart-btn svg,
+  .basket-btn svg {
+    fill: transparent; 
     stroke: var(--black);
-    transition: all 0.3s ease;
+    stroke-width: 1.5;  
+  }
+  
+  .heart-btn.active svg {
+    fill: var(--black); 
+    stroke: var(--black); 
+  }
+
+  .toast {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: var(--white);
+    color: var(--black);
+    padding: 20px 25px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    font-family: var(--main-font, sans-serif);
+    font-size: 16px;
+    line-height: 0.7;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+    opacity: 0;
+    animation: bounce-animation 0.4s ease, fadeInOut 2s ease-in-out forwards;
 }
 
-.heart-btn.active svg, .basket-btn.active svg {
-    fill: white;
-    stroke: white;
+@keyframes bounce-animation {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.5);  /* Збільшуємо до 120% */
+    }
+    60% {
+        transform: scale(0.85); /* Зменшуємо до 95% */
+    }
+    100% {
+        transform: scale(1);    /* Повертаємо до початкового розміру */
+    }
 }
 
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
+  
+  
 .catalog-first {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -670,21 +704,7 @@ option:hover {
     border-radius: 5px;
 }
 
-.product-item .image-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0); 
-    transition: background-color 0.3s ease-in-out;
-}
 
-.product-item:hover .image-wrapper::after {
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-  
 .svg-row {
     position: absolute; 
     top: 5px;
@@ -732,7 +752,5 @@ option:hover {
     transition: background-color 0.3s;
 }
   
-.product-item button:hover {
-    background-color: #333;
-}
+
   
