@@ -1,0 +1,21 @@
+window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    const footer = document.querySelector(".footer");
+
+    if (!header || !footer) return;
+
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+    if (footerTop <= windowHeight) {
+        header.classList.add("hidden");
+    } else {
+        header.classList.remove("hidden");
+    }
+});

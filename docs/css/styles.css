@@ -222,6 +222,10 @@ img {
   display: none;
 }
 
+.mobile-scrolled-cart {
+  display: none;
+}
+
 /* Модальне вікно для корзинки */
 .cart-modal {
   position: fixed;

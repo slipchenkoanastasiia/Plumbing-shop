@@ -211,7 +211,7 @@ img {
   fill: var(--white);
 }
 
-.burger-socials {
+.burger-socials, .mobile-scrolled-cart {
   display: none;
 }
 

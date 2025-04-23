@@ -92,14 +92,18 @@
     background-color: var(--light-gray);
   }
 
-  .header.scrolled .icon {
+  .header.scrolled .mobile-scrolled-search {
+    display: none;
+  }
+
+  .header.scrolled .mobile-scrolled-cart {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
   }
 
-  .header.scrolled .icon svg {
+  .header.scrolled .mobile-scrolled-cart svg {
     fill: var(--white);
   }
 
