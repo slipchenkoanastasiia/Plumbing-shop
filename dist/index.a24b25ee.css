@@ -9,11 +9,10 @@
 
 .delivery-cardd {
   background: var(--light-gray);
-  text-align: left;
   aspect-ratio: 3 / 4;
   border-radius: 10px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   padding: 20px;
@@ -23,23 +22,26 @@
   overflow: hidden;
 }
 
-.delivery-cardd:hover {
-  background: var(--black);
-  color: var(--white);
-}
-
-.delivery-cardd h3, .delivery-cardd p {
-  color: var(--white);
-  transition: color .3s ease-in-out, opacity .3s ease-in-out;
+.delivery-cardd-top h3 {
+  color: var(--black);
+  text-align: left;
+  margin: 0;
 }
 
 .delivery-cardd p {
   opacity: 0;
   color: var(--white);
   letter-spacing: .2px;
+  text-align: left;
+  margin: 0;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.delivery-cardd:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 .delivery-cardd:hover p {

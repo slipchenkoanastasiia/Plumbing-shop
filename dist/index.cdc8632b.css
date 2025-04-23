@@ -373,6 +373,10 @@ option:hover {
   overflow: hidden;
 }
 
+.card-one {
+  height: 480px !important;
+}
+
 .catalog-img-wrapper {
   border-radius: 5px;
   width: 100%;
@@ -454,6 +458,7 @@ option:hover {
   cursor: pointer;
   background: none;
   border: none;
+  margin-top: -10px;
   margin-left: 200px;
   padding: 4px;
 }

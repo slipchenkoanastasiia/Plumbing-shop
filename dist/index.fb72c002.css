@@ -143,8 +143,23 @@
   display: block;
 }
 
+.product-details-wrapper {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 160px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.product-characteristics, .product-reviews {
+  flex: 1;
+  min-width: 300px;
+}
+
 .product-characteristics {
-  margin-top: 20px;
+  margin-top: 30px;
+  align-items: flex-start !important;
+  margin-left: auto !important;
 }
 
 .characteristic {
@@ -154,15 +169,25 @@
 }
 
 .characteristic-label {
-  font-weight: bold;
+  letter-spacing: .3px;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  font-family: var(--main-font);
 }
 
 .characteristic-value {
-  color: #555;
+  letter-spacing: .3px;
+  color: var(--dark-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: var(--main-font);
 }
 
 .product-reviews {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .product-reviews h3 {
@@ -177,21 +202,31 @@
 
 .review-form textarea {
   resize: vertical;
+  border: 1px solid #000;
+  border-radius: 5px;
   margin-bottom: 10px;
   padding: 10px;
 }
 
 .review-form button {
-  color: #fff;
+  letter-spacing: .2px;
+  color: var(--white);
+  background-color: var(--black);
   cursor: pointer;
-  background-color: #4caf50;
-  border: none;
+  border: 1px solid #000;
+  border-radius: 5px;
   align-self: flex-start;
-  padding: 8px 16px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color .3s, color .3s;
 }
 
 .review-form button:hover {
-  background-color: #45a049;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .related-products {

@@ -842,6 +842,20 @@
     display: none;
   }
 
+  .heart-btn {
+    top: 5px !important;
+    left: 60px !important;
+  }
+
+  .basket-btn {
+    margin-top: 5px;
+    margin-left: 80px !important;
+  }
+
+  .product-item {
+    position: relative;
+  }
+
   .catalog-card {
     object-fit: cover;
     width: 100%;
@@ -922,6 +936,15 @@
     align-items: center;
     padding: 10px;
     display: flex;
+  }
+
+  .product-details-wrapper {
+    margin-top: 10px;
+    gap: 20px !important;
+  }
+
+  .product-descriptiong {
+    margin-top: -20px !important;
   }
 
   .product-page .right-content {
@@ -1050,6 +1073,7 @@
 
   .delivery-containerd {
     margin-top: 90px !important;
+    padding: 0 40px !important;
   }
 
   .delivery-gridd {

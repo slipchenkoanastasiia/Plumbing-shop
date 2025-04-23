@@ -7,50 +7,53 @@
     max-width: 1300px; 
 }
 
+
 .delivery-cardd {
     background: var(--light-gray);
     padding: 20px;
     border-radius: 10px;
-    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start; /* Позиціонуємо елементи від верху */
     align-items: flex-start;
+    aspect-ratio: 3 / 4;
+    width: 100%;
     transition: transform 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 3 / 4; 
-    width: 100%;
-}
-
-.delivery-cardd:hover {
-    background: var(--black);
-    color: var(--white); 
-}
-
-.delivery-cardd h3,
-.delivery-cardd p {
-    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    color: var(--white);
-}
-
-.delivery-cardd p {
+  }
+  
+  .delivery-cardd-top h3 {
+    margin: 0;
+    color: var(--black);
+    text-align: left;
+  }
+  
+  .delivery-cardd p {
+    margin: 0;
     opacity: 0;
     color: var(--white);
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.2px; 
-}
-
-.delivery-cardd:hover p {
-    opacity: 1;
-}
-
-.delivery-cardd:hover h3 {
+    letter-spacing: 0.2px;
+    text-align: left;
+  }
+  
+  /* Ховер */
+  .delivery-cardd:hover {
+    background: var(--black);
     color: var(--white);
-}
-
+  }
+  
+  .delivery-cardd:hover p {
+    opacity: 1;
+  }
+  
+  .delivery-cardd:hover h3 {
+    color: var(--white);
+  }
+  
 .delivery-containerd h2 {
     font-family: var(--main-font);
     font-size: 32px;

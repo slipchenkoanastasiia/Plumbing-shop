@@ -6,7 +6,7 @@
   --dark-graphite: #212529;
   --light-gray: #f8f9fa;
   --medium-gray: #dee2e6;
-  --accent-blue: #007bff;
+  --dark-gray: #6c757d;
 }
 
 body {
@@ -293,7 +293,8 @@ img {
 .slide img {
   object-fit: cover;
   width: 100%;
-  height: 730px;
+  height: 799px;
+  display: block;
 }
 
 @keyframes slide {
@@ -316,7 +317,7 @@ img {
   padding: 20px;
   position: absolute;
   top: 60%;
-  left: 30%;
+  left: 20%;
   transform: translateY(-50%);
 }
 

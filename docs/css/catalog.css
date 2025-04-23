@@ -1,6 +1,5 @@
  /* Загальні стилі для фільтра */
 
-
  .menu-filters {
     padding-left: 20px;  
     padding-right: 20px;
@@ -374,6 +373,10 @@ option:hover {
     margin-bottom: 50px;
 }
 
+.card-one {
+    height: 480px !important;
+}
+
 .catalog-img-wrapper {
     position: relative;
     width: 100%;
@@ -459,6 +462,7 @@ option:hover {
     cursor: pointer;
     padding: 4px;
     margin-left: 200px;
+    margin-top: -10px;
   }
   
   .basket-btn.active svg {
@@ -502,13 +506,13 @@ option:hover {
         transform: scale(1);
     }
     30% {
-        transform: scale(1.5);  /* Збільшуємо до 120% */
+        transform: scale(1.5);  
     }
     60% {
-        transform: scale(0.85); /* Зменшуємо до 95% */
+        transform: scale(0.85);
     }
     100% {
-        transform: scale(1);    /* Повертаємо до початкового розміру */
+        transform: scale(1);   
     }
 }
 

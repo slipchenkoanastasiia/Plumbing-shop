@@ -1,6 +1,6 @@
 .search-cont {
+  height: calc(100vh - 150px);
   margin-top: 150px;
-  margin-bottom: 100px;
 }
 
 .search-container {

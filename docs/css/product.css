@@ -147,8 +147,24 @@
 
 /* Характеристики та відгук */
 
+.product-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 160px; 
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.product-characteristics,
+.product-reviews {
+  flex: 1;
+  min-width: 300px; 
+}
+
 .product-characteristics {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: auto !important;
+  align-items: flex-start !important; 
 }
 
 .characteristic {
@@ -158,15 +174,25 @@
 }
 
 .characteristic-label {
-  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  color: var(--black);
+  font-weight: 600;
+  font-family: var(--main-font);
 }
 
 .characteristic-value {
-  color: #555;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  color: var(--dark-gray);
+  font-weight: 400;
+  font-family: var(--main-font);
 }
 
 .product-reviews {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .product-reviews h3 {
@@ -183,19 +209,29 @@
   padding: 10px;
   margin-bottom: 10px;
   resize: vertical;
+  border: 1px solid #000;
+  border-radius: 5; 
 }
 
 .review-form button {
   align-self: flex-start;
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--black);
+  border: 1px solid #000;
+  border-radius: 5; 
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .review-form button:hover {
-  background-color: #45a049;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 
@@ -319,7 +355,6 @@
   line-height: 1.5;
   letter-spacing: 0.2px;
   text-align: left;
-
 }
 
 .delivery-grid {
