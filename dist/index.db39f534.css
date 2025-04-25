@@ -83,7 +83,7 @@
     pointer-events: none;
   }
 
-  .header.scrolled .menu a {
+  header.scrolled .menu a {
     color: var(--white);
   }
 
@@ -92,19 +92,12 @@
     background-color: var(--light-gray);
   }
 
-  .header.scrolled .mobile-scrolled-search {
-    display: none;
-  }
-
-  .header.scrolled .mobile-scrolled-cart {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-  }
-
-  .header.scrolled .mobile-scrolled-cart svg {
+  .header.scrolled .icon svg {
     fill: var(--white);
+  }
+
+  .burger-socials {
+    display: none;
   }
 
   nav {
