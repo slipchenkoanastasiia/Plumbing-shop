@@ -83,7 +83,7 @@
         visibility: hidden;
         pointer-events: none;
       }
-      
+
       header.scrolled .menu a {
         color: var(--white);
       }
@@ -101,6 +101,8 @@
         display: none;
       }
 
+      
+      
     /* Меню бургер */
 
     nav {
