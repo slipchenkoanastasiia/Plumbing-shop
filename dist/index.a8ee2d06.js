@@ -6,10 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
         const footerTop = footer.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        // Ефект скролу для хедера
         if (window.scrollY > 100) header.classList.add("scrolled");
         else header.classList.remove("scrolled");
-        // Ховання хедера і кнопки при наближенні до футера
         if (footerTop <= windowHeight) {
             header.classList.add("hidden");
             if (button) button.classList.add("hidden");
