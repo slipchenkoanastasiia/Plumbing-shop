@@ -143,6 +143,30 @@
   display: block;
 }
 
+.product-thumbnails {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.thumbnail-image {
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 30%;
+  height: 40%;
+  transition: border-color .3s;
+}
+
+.thumbnail-image:hover {
+  border-color: #000;
+}
+
 .product-details-wrapper {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -466,5 +490,53 @@
 
 .contact-button:hover {
   fill: var(--medium-gray);
+}
+
+.cart-modal-notification {
+  background-color: var(--white);
+  color: var(--black);
+  z-index: 9999;
+  font-family: var(--main-font, sans-serif);
+  letter-spacing: .3px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: .7;
+  animation: 2s ease-in-out forwards fadeInOut;
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.cart-modal-notification p {
+  font-family: var(--accent-font);
+  color: var(--black);
+  letter-spacing: .2px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 /*# sourceMappingURL=index.fb72c002.css.map */

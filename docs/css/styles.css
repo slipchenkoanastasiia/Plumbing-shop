@@ -141,7 +141,7 @@ img {
   letter-spacing: 0.2px;
   position: relative; 
   padding: 10px 15px; 
-  transition: transform 0.3s ease, color 0.3s
+  transition: transform 0.3s ease, color 0.3s;
 }
 
 .menu a::before {
@@ -223,6 +223,10 @@ img {
 }
 
 .mobile-scrolled-cart {
+  display: none;
+}
+
+.menu-cart-link {
   display: none;
 }
 

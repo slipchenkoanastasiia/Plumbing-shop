@@ -145,6 +145,31 @@
   display: block;
 }
 
+.product-thumbnails {
+  display: flex;
+  justify-content: space-between; 
+  gap: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%; 
+  flex-wrap: wrap;
+}
+
+.thumbnail-image {
+  width: 30%;  
+  height: 40%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.thumbnail-image:hover {
+  border-color: black;
+}
+
+
 /* Характеристики та відгук */
 
 .product-details-wrapper {
@@ -451,4 +476,52 @@
 
 .contact-button:hover {
   fill: var(--medium-gray);
+}
+
+/* Модальне вікно для додавання в корзинку */
+
+.cart-modal-notification {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 15px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-family: var(--main-font, sans-serif);
+  font-size: 16px;
+  line-height: 0.7;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+  display: none; 
+  animation: fadeInOut 2s ease-in-out forwards;
+}
+
+.cart-modal-notification p {
+  margin: 0;
+  font-family: var(--accent-font);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5; 
+  letter-spacing: 0.2px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
