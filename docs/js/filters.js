@@ -1,4 +1,4 @@
-// Скрипт для основної фільтрації товарів 
+// Для основної фільтрації товарів 
 function toggleDropdown(selectType) {
     const selectedDropdown = document.getElementById(`${selectType}-dropdown`);
     const selectedWrapper = document.querySelector(`#${selectType}-dropdown`).parentElement;

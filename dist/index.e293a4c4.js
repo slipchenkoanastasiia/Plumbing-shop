@@ -1,3 +1,4 @@
+// Слайдер для продукції новинки
 const sliderTrack = document.querySelector('.slider-track');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');

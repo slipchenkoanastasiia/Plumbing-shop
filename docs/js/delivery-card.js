@@ -1,3 +1,4 @@
+// Для карток з доставкою
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".delivery-card");
     const contactInfo = document.querySelector(".contact-info");

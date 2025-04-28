@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/basket.css">
 </head>
 <body>
       
@@ -37,7 +38,16 @@
         <li><a href="./about.html">Про нас</a></li>
         <li><a href="./delivery.html">Доставка і оплата</a></li>
         <li><a href="./contact.html">Контакти</a></li>
+        <li class="menu-cart">
+          <a href="./basket.html" class="menu-cart-link">
+            <svg width="24" height="24" fill="black" class="menu-cart-icon">
+              <use href="./media/icons.svg#basket"></use>
+            </svg>
+            <span>Дивитися, що обрано</span>
+          </a>
+        </li>
       </ul>
+
       <div class="burger-socials">
         <p class="social-text">Ми чекаємо вас на сторінках:</p>
         <div class="social-icons">
@@ -57,18 +67,11 @@
       </div>
     </nav>
     <div class="icons">
-      <a href="#" class="icon" id="cart-icon">
+      <a href="./basket.html" class="icon" id="cart-icon">
         <svg width="24" height="24" fill="black">
           <use href="./media/icons.svg#basket"></use>
         </svg>
       </a>
-      
-      <div class="cart-modal" id="cart-modal">
-        <div class="modal-content">
-          <p>Ваша корзина ще пуста 😔</p>
-        </div>
-      </div>
-      
       <a href="./search.html" id="icon" class="icon">
         <svg width="24" height="24">
           <use href="./media/icons.svg#search"></use>
@@ -163,139 +166,141 @@ closeBtn.addEventListener('click', () => {
     </div>
   </footer>
 
-  <script>
-    const burgerBtn = document.getElementById('burger-btn');
-    const nav = document.querySelector('nav');
-  
-    burgerBtn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
+<!-- Для бургеру в хедері -->
+<script>
+  const burgerBtn = document.getElementById('burger-btn');
+  const nav = document.querySelector('nav');
 
-  <div id="consultationModal" class="consultation-modal">
-    <div class="consultation-modal-content">
-      <button class="close-consultation-modal">
-        <svg width="24" height="24">
-          <use href="./media/icons.svg#cross"></use>
-        </svg>
-      </button>
-      <h2>Замовити консультацію</h2>
-      <form id="consultationForm">
-        <label for="name">Ім'я</label>
-        <input type="text" id="name" name="name" required>
-  
-        <label for="phone">Телефон</label>
-        <input type="tel" id="phone" name="phone" required>
-  
-        <label for="message">Коментар</label>
-        <textarea id="message" name="message"></textarea>
-  
-        <button type="submit">Надіслати</button>
-      </form>
-    </div>
-  </div>
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const openModalBtn = document.getElementById("openConsultationModal");
-    const modal = document.getElementById("consultationModal");
-    const closeModalBtn = modal.querySelector(".close-consultation-modal");
-    const form = document.getElementById("consultationForm");
-  
-    modal.style.display = "none";
-  
-    openModalBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      modal.style.display = "flex";
-    });
-  
-    closeModalBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      modal.style.display = "none";
-      alert("Дякуємо! Ваша заявка відправлена.");
-    });
+  burgerBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
   });
-  </script>
-  
-  <div id="modalContainer">
-    <div id="loginModal" class="modal-pers" style="display: none;">
-        <div class="content-pers">
-            <button class="close-btnn" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>
-            </button>
-            <h2>Вхід до персонального кабінету</h2>
-            <form class="login-form">
-              <div class="form-group">
-                <label for="email" class="visually-hidden">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="E-mail" class="custom-email">
-            </div>
+</script>
+
+<!-- Форма входу в персональний кабінет в header -->
+<div id="modalContainer">
+  <div id="loginModal" class="modal-pers" style="display: none;">
+      <div class="content-pers">
+          <button class="close-btnn" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+              </svg>
+          </button>
+          <h2>Вхід до персонального кабінету</h2>
+          <form class="login-form">
             <div class="form-group">
-                <label for="password" class="visually-hidden">Пароль</label>
-                <input type="password" id="password" name="password" placeholder="Пароль">
-                <button type="button" class="toggle-password">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
-                        <path fill="currentColor" d="M12 4.5C7.3 4.5 3.3 7.1 1 11.5C3.3 15.9 7.3 18.5 12 18.5S20.7 15.9 23 11.5C20.7 7.1 16.7 4.5 12 4.5ZM12 16.5C9.2 16.5 7 14.3 7 11.5C7 8.7 9.2 6.5 12 6.5C14.8 6.5 17 8.7 17 11.5C17 14.3 14.8 16.5 12 16.5ZM12 8.5C10.6 8.5 9.5 9.6 9.5 11.5C9.5 13.4 10.6 14.5 12 14.5C13.4 14.5 14.5 13.4 14.5 11.5C14.5 9.6 13.4 8.5 12 8.5Z"></path>
-                    </svg>
-                </button>
-            </div> 
-            <a href="#" class="forgot-password">забули свій пароль?</a>
-            <button type="submit" class="login-btn">Login</button>
-            <button type="button" class="register-btn">Register</button>
-            <div class="social-login">
-                <button type="button" class="facebook-login">Login with Facebook</button>
-                <button type="button" class="google-login">Login with Google</button>
-            </div>
-        </form>
-        <p class="privacy-policy">
-          Реєструючись або входячи за допомогою свого профілю в соціальній мережі, я даю згоду на зв'язування мого акаунта відповідно до положень Політики конфіденційності.
-        </p>
-    </div>
+              <label for="email" class="visually-hidden">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="E-mail" class="custom-email">
+          </div>
+          <div class="form-group">
+              <label for="password" class="visually-hidden">Пароль</label>
+              <input type="password" id="password" name="password" placeholder="Пароль">
+              <button type="button" class="toggle-password">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                      <path fill="currentColor" d="M12 4.5C7.3 4.5 3.3 7.1 1 11.5C3.3 15.9 7.3 18.5 12 18.5S20.7 15.9 23 11.5C20.7 7.1 16.7 4.5 12 4.5ZM12 16.5C9.2 16.5 7 14.3 7 11.5C7 8.7 9.2 6.5 12 6.5C14.8 6.5 17 8.7 17 11.5C17 14.3 14.8 16.5 12 16.5ZM12 8.5C10.6 8.5 9.5 9.6 9.5 11.5C9.5 13.4 10.6 14.5 12 14.5C13.4 14.5 14.5 13.4 14.5 11.5C14.5 9.6 13.4 8.5 12 8.5Z"></path>
+                  </svg>
+              </button>
+          </div> 
+          <a href="#" class="forgot-password">забули свій пароль?</a>
+          <button type="submit" class="login-btn">Login</button>
+          <button type="button" class="register-btn">Register</button>
+          <div class="social-login">
+              <button type="button" class="facebook-login">Login with Facebook</button>
+              <button type="button" class="google-login">Login with Google</button>
+          </div>
+      </form>
+      <p class="privacy-policy">
+        Реєструючись або входячи за допомогою свого профілю в соціальній мережі, я даю згоду на зв'язування мого акаунта відповідно до положень Політики конфіденційності.
+      </p>
+  </div>
 </div>
 </div> 
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const openModalLinks = document.querySelectorAll('.open-login-modal'); 
-  const modal = document.getElementById('loginModal'); 
-  const closeModalBtn = document.querySelector('.close-btnn'); 
+const openModalLinks = document.querySelectorAll('.open-login-modal'); 
+const modal = document.getElementById('loginModal'); 
+const closeModalBtn = document.querySelector('.close-btnn'); 
 
-  if (openModalLinks.length > 0 && modal && closeModalBtn) {
-      openModalLinks.forEach(link => {
-          link.addEventListener('click', function (event) {
-              event.preventDefault(); 
-              modal.style.display = 'flex'; 
-          });
-      });
+if (openModalLinks.length > 0 && modal && closeModalBtn) {
+    openModalLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); 
+            modal.style.display = 'flex'; 
+        });
+    });
 
-      closeModalBtn.addEventListener('click', function () {
-          modal.style.display = 'none'; 
-      });
+    closeModalBtn.addEventListener('click', function () {
+        modal.style.display = 'none'; 
+    });
 
-      window.addEventListener('click', function (event) {
-          if (event.target === modal) {
-              modal.style.display = 'none'; 
-          }
-      });
-  } else {
-      console.error('Не знайдено один із елементів: кнопки відкриття, модалка або кнопка закриття.');
-  }
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none'; 
+        }
+    });
+} else {
+    console.error('Не знайдено один із елементів: кнопки відкриття, модалка або кнопка закриття.');
+}
 });
 </script>
-    
-  <script src="./js/cart-modal.js"></script>
-  <script src="./js/search-input.js"></script>
+
+<!-- Форма замовлення консультації в footer -->
+<div id="consultationModal" class="consultation-modal">
+<div class="consultation-modal-content">
+  <button class="close-consultation-modal">
+    <svg width="24" height="24">
+      <use href="./media/icons.svg#cross"></use>
+    </svg>
+  </button>
+  <h2>Замовити консультацію</h2>
+  <form id="consultationForm">
+    <label for="name">Ім'я</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Телефон</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="message">Коментар</label>
+    <textarea id="message" name="message"></textarea>
+
+    <button type="submit">Надіслати</button>
+  </form>
+</div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const openModalBtn = document.getElementById("openConsultationModal");
+const modal = document.getElementById("consultationModal");
+const closeModalBtn = modal.querySelector(".close-consultation-modal");
+const form = document.getElementById("consultationForm");
+
+modal.style.display = "none";
+
+openModalBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  modal.style.display = "flex";
+});
+
+closeModalBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  modal.style.display = "none";
+  alert("Дякуємо! Ваша заявка відправлена.");
+});
+});
+</script>
+
+<script src="./js/search-input.js"></script>
 
 </body>
 </html>

@@ -1,21 +1,20 @@
-const sliderTrack = document.querySelector('.slider-container'); // Коригуємо тут, бо твої слайди в контейнері .slider-container
-const slides = document.querySelectorAll('.slide'); // Це всі слайди
+// Слайдер в hero
+const sliderTrack = document.querySelector('.slider-container'); 
+const slides = document.querySelectorAll('.slide'); 
 let currentIndex = 0;
 
-const totalSlides = slides.length; // Кількість слайдів
+const totalSlides = slides.length; 
 
-// Функція для оновлення слайдера
 function updateSlider() {
-  const slideWidth = slides[0].offsetWidth; // Отримуємо ширину одного слайду
-  sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`; // Переміщаємо слайдер
+  const slideWidth = slides[0].offsetWidth; 
+  sliderTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`; 
 }
 
-// Автоматичний перехід слайдів кожні 3 секунди
 let autoSlideInterval = setInterval(() => {
   if (currentIndex < totalSlides - 1) {
     currentIndex++;
   } else {
-    currentIndex = 0; // Якщо дійшли до останнього слайду, повертаємось на перший
+    currentIndex = 0;
   }
   updateSlider();
-}, 3000); // Перемикання кожні 3 секунди
+}, 3000); 

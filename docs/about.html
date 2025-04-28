@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/basket.css">
 
 </head>
 <body>
@@ -38,7 +39,16 @@
         <li><a href="./about.html">Про нас</a></li>
         <li><a href="./delivery.html">Доставка і оплата</a></li>
         <li><a href="./contact.html">Контакти</a></li>
+        <li class="menu-cart">
+          <a href="./basket.html" class="menu-cart-link">
+            <svg width="24" height="24" fill="black" class="menu-cart-icon">
+              <use href="./media/icons.svg#basket"></use>
+            </svg>
+            <span>Дивитися, що обрано</span>
+          </a>
+        </li>
       </ul>
+
       <div class="burger-socials">
         <p class="social-text">Ми чекаємо вас на сторінках:</p>
         <div class="social-icons">
@@ -58,18 +68,11 @@
       </div>
     </nav>
     <div class="icons">
-      <a href="#" class="icon" id="cart-icon">
+      <a href="./basket.html" class="icon" id="cart-icon">
         <svg width="24" height="24" fill="black">
           <use href="./media/icons.svg#basket"></use>
         </svg>
       </a>
-      
-      <div class="cart-modal" id="cart-modal">
-        <div class="modal-content">
-          <p>Ваша корзина ще пуста 😔</p>
-        </div>
-      </div>
-      
       <a href="./search.html" id="icon" class="icon">
         <svg width="24" height="24">
           <use href="./media/icons.svg#search"></use>
@@ -131,6 +134,7 @@
     </div>
   </footer>
 
+<!-- Для бургеру в хедері -->
   <script>
     const burgerBtn = document.getElementById('burger-btn');
     const nav = document.querySelector('nav');
@@ -140,61 +144,7 @@
     });
   </script>
 
-  <div id="consultationModal" class="consultation-modal">
-    <div class="consultation-modal-content">
-      <button class="close-consultation-modal">
-        <svg width="24" height="24">
-          <use href="./media/icons.svg#cross"></use>
-        </svg>
-      </button>
-      <h2>Замовити консультацію</h2>
-      <form id="consultationForm">
-        <label for="name">Ім'я</label>
-        <input type="text" id="name" name="name" required>
-  
-        <label for="phone">Телефон</label>
-        <input type="tel" id="phone" name="phone" required>
-  
-        <label for="message">Коментар</label>
-        <textarea id="message" name="message"></textarea>
-  
-        <button type="submit">Надіслати</button>
-      </form>
-    </div>
-  </div>
-  
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const openModalBtn = document.getElementById("openConsultationModal");
-    const modal = document.getElementById("consultationModal");
-    const closeModalBtn = modal.querySelector(".close-consultation-modal");
-    const form = document.getElementById("consultationForm");
-  
-    modal.style.display = "none";
-  
-    openModalBtn.addEventListener("click", function (event) {
-      event.preventDefault();
-      modal.style.display = "flex";
-    });
-  
-    closeModalBtn.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      modal.style.display = "none";
-      alert("Дякуємо! Ваша заявка відправлена.");
-    });
-  });
-  </script>
-  
+<!-- Форма входу в персональний кабінет в header -->
   <div id="modalContainer">
     <div id="loginModal" class="modal-pers" style="display: none;">
         <div class="content-pers">
@@ -261,12 +211,64 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
-  
-  <script src="./js/scrollhead.js"></script>
-  <script src="./js/slider-wrapper.js"></script>
-  <script src="./js/special-slider.js"></script>
-  <script src="./js/review-card.js"></script>
-  <script src="./js/cart-modal.js"></script>
 
+<!-- Форма замовлення консультації в footer -->
+<div id="consultationModal" class="consultation-modal">
+  <div class="consultation-modal-content">
+    <button class="close-consultation-modal">
+      <svg width="24" height="24">
+        <use href="./media/icons.svg#cross"></use>
+      </svg>
+    </button>
+    <h2>Замовити консультацію</h2>
+    <form id="consultationForm">
+      <label for="name">Ім'я</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Коментар</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const openModalBtn = document.getElementById("openConsultationModal");
+  const modal = document.getElementById("consultationModal");
+  const closeModalBtn = modal.querySelector(".close-consultation-modal");
+  const form = document.getElementById("consultationForm");
+
+  modal.style.display = "none";
+
+  openModalBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    modal.style.display = "flex";
+  });
+
+  closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    modal.style.display = "none";
+    alert("Дякуємо! Ваша заявка відправлена.");
+  });
+});
+</script>
+
+<script src="./js/search-input.js"></script>
+  
 </body>
 </html>

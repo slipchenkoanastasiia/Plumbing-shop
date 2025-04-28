@@ -1,3 +1,4 @@
+// Для кнопок з корзиною
 document.addEventListener('DOMContentLoaded', ()=>{
     document.querySelectorAll('.basket-btn').forEach((button)=>{
         button.addEventListener('click', function(event) {

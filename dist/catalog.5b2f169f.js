@@ -1,3 +1,4 @@
+// Для сторінки пошуку
 const searchInput = document.getElementById('search-input');
 const searchIcon = document.getElementById('search-icon');
 searchIcon.addEventListener('click', function() {

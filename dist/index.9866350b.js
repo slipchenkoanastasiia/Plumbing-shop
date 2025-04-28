@@ -1,3 +1,4 @@
+// Відгуки про бренди на головному html
 const reviewsSection = document.querySelector('.reviews-section');
 const reviewCards = document.querySelectorAll('.review-card');
 const observerOptions = {

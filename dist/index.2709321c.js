@@ -1,3 +1,4 @@
+// Слайдер для продукції спеціальні пропозиції
 const specialSliderTrack = document.querySelector('.special-slider-track');
 const specialPrevBtn = document.querySelector('.special-prev');
 const specialNextBtn = document.querySelector('.special-next');

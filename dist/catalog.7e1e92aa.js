@@ -1,3 +1,4 @@
+// Для фільтру цін
 function updatePrice() {
     let minPrice = parseInt(document.getElementById('minPrice').value, 10) || 0;
     let maxPrice = parseInt(document.getElementById('maxPrice').value, 10);

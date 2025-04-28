@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/index.5bb10ee2.css">
     <link rel="stylesheet" href="/index.dbfc1239.css">
     <link rel="stylesheet" href="/index.fb72c002.css">
+    <link rel="stylesheet" href="/index.31457977.css">
 
 </head>
 <body>
@@ -39,7 +40,7 @@
         <li><a href="/delivery.html">Доставка і оплата</a></li>
         <li><a href="/contact.html">Контакти</a></li>
         <li class="menu-cart">
-          <a href="#" class="menu-cart-link">
+          <a href="/basket.html" class="menu-cart-link">
             <svg width="24" height="24" fill="black" class="menu-cart-icon">
               <use href="/icons.db4458ec.svg#basket"></use>
             </svg>
@@ -48,7 +49,6 @@
         </li>
       </ul>
 
-      
       <div class="burger-socials">
         <p class="social-text">Ми чекаємо вас на сторінках:</p>
         <div class="social-icons">
@@ -68,18 +68,11 @@
       </div>
     </nav>
     <div class="icons">
-      <a href="#" class="icon" id="cart-icon">
+      <a href="/basket.html" class="icon" id="cart-icon">
         <svg width="24" height="24" fill="black">
           <use href="/icons.db4458ec.svg#basket"></use>
         </svg>
       </a>
-      
-      <div class="cart-modal" id="cart-modal">
-        <div class="modal-content">
-          <p>Ваша корзина ще пуста 😔</p>
-        </div>
-      </div>
-      
       <a href="/search.html" id="icon" class="icon">
         <svg width="24" height="24">
           <use href="/icons.db4458ec.svg#search"></use>
@@ -252,7 +245,6 @@
       </div>
     </section>
 
-   
     <section class="special-offers">
       <h2 class="section-title">Спеціальні пропозиції</h2>
       <div class="special-slider">
@@ -375,62 +367,16 @@
       </div>
     </footer>
 
-    <div id="consultationModal" class="consultation-modal">
-      <div class="consultation-modal-content">
-        <button class="close-consultation-modal">
-          <svg width="24" height="24">
-            <use href="/icons.db4458ec.svg#cross"></use>
-          </svg>
-        </button>
-        <h2>Замовити консультацію</h2>
-        <form id="consultationForm">
-          <label for="name">Ім'я</label>
-          <input type="text" id="name" name="name" required="">
-    
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" name="phone" required="">
-    
-          <label for="message">Коментар</label>
-          <textarea id="message" name="message"></textarea>
-    
-          <button type="submit">Надіслати</button>
-        </form>
-      </div>
-    </div>
-
-    <script>const burgerBtn = document.getElementById('burger-btn');
+<!-- Для бургеру в хедері -->
+<script>const burgerBtn = document.getElementById('burger-btn');
 const nav = document.querySelector('nav');
 burgerBtn.addEventListener('click', ()=>{
     nav.classList.toggle('active');
 });
 
 </script>
-    
-    <script>document.addEventListener("DOMContentLoaded", function() {
-    const openModalBtn = document.getElementById("openConsultationModal");
-    const modal = document.getElementById("consultationModal");
-    const closeModalBtn = modal.querySelector(".close-consultation-modal");
-    const form = document.getElementById("consultationForm");
-    modal.style.display = "none";
-    openModalBtn.addEventListener("click", function(event) {
-        event.preventDefault();
-        modal.style.display = "flex";
-    });
-    closeModalBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) modal.style.display = "none";
-    });
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        modal.style.display = "none";
-        alert("\u0414\u044F\u043A\u0443\u0454\u043C\u043E! \u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u0432\u0456\u0434\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.");
-    });
-});
 
-</script>
-    
+<!-- Форма входу в персональний кабінет в header -->
     <div id="modalContainer">
       <div id="loginModal" class="modal-pers" style="display: none">
           <div class="content-pers">
@@ -491,6 +437,7 @@ burgerBtn.addEventListener('click', ()=>{
 
 </script>
 
+<!-- Форма замовлення консультації в header -->
 <div id="questionModal" class="question-modal">
   <div class="question-modal-content">
     <button class="close-question-modal">
@@ -539,12 +486,60 @@ burgerBtn.addEventListener('click', ()=>{
 
 </script>
 
+  <!-- Форма замовлення консультації в footer -->
+  <div id="consultationModal" class="consultation-modal">
+    <div class="consultation-modal-content">
+      <button class="close-consultation-modal">
+        <svg width="24" height="24">
+          <use href="/icons.db4458ec.svg#cross"></use>
+        </svg>
+      </button>
+      <h2>Замовити консультацію</h2>
+      <form id="consultationForm">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" name="name" required="">
+  
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" required="">
+  
+        <label for="message">Коментар</label>
+        <textarea id="message" name="message"></textarea>
+  
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+  
+  <script>document.addEventListener("DOMContentLoaded", function() {
+    const openModalBtn = document.getElementById("openConsultationModal");
+    const modal = document.getElementById("consultationModal");
+    const closeModalBtn = modal.querySelector(".close-consultation-modal");
+    const form = document.getElementById("consultationForm");
+    modal.style.display = "none";
+    openModalBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        modal.style.display = "flex";
+    });
+    closeModalBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) modal.style.display = "none";
+    });
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        modal.style.display = "none";
+        alert("\u0414\u044F\u043A\u0443\u0454\u043C\u043E! \u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u0432\u0456\u0434\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430.");
+    });
+});
+
+</script>
+
     <script src="/index.cd14da72.js"></script>
     <script src="/index.a8ee2d06.js"></script>
     <script src="/index.e293a4c4.js"></script>
     <script src="/index.2709321c.js"></script>
-    <script src="/index.9866350b.js"></script>
-    <script src="/index.92bb8ed8.js"></script>
+
 
 <script src="/docs.1caa2c4a.js"></script></body>
 </html>

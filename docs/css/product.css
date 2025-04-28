@@ -216,40 +216,57 @@
   font-family: var(--main-font);
 }
 
+/* Форма відгуку */
+
 .product-reviews {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 10px;
+  padding: 20px;
 }
 
 .product-reviews h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-family: var(--main-font);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--black);
 }
 
 .review-form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .review-form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 12px 15px;
   resize: vertical;
-  border: 1px solid #000;
-  border-radius: 5; 
+  min-height: 120px;
+  font-size: 16px;
+  font-family: var(--main-font);
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.review-form textarea:focus {
+  border-color: var(--medium-gray); 
 }
 
 .review-form button {
   align-self: flex-start;
-  padding: 10px 15px;
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.2;
   letter-spacing: 0.2px;
   color: var(--white);
   font-weight: 600;
+  font-family: var(--main-font);
   background-color: var(--black);
-  border: 1px solid #000;
-  border-radius: 5; 
+  border: 1px solid var(--black);
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -263,7 +280,7 @@
 /* Схожі товари */
 .related-products {
   width: 100%;
-  margin-top: 40px;
+  margin-top: -40px;
   padding: 0;
 }
 
