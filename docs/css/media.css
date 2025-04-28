@@ -126,10 +126,10 @@
       z-index: 999; 
     }
     
-    
     .header.scrolled nav.active {
-      display: flex; 
+      display: flex;
     }
+    
     
     .header.scrolled nav ul.menu {
       flex-direction: column;
