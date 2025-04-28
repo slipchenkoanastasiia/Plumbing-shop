@@ -103,30 +103,4 @@
   width: 100%;
   height: 330px;
 }
-
-@media (width <= 1200px) {
-  .delivery-gridd {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .delivery-cardd {
-    width: 100%;
-  }
-
-  .delivery-cardd:nth-child(5), .delivery-cardd:nth-child(6) {
-    grid-column: span 1;
-    height: 500px;
-  }
-}
-
-@media (width <= 768px) {
-  .delivery-gridd {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .delivery-cardd {
-    width: 100%;
-    height: auto;
-  }
-}
 /*# sourceMappingURL=index.a24b25ee.css.map */

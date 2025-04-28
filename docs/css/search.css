@@ -58,7 +58,6 @@
     z-index: 10;
 }
   
-
 .close-btnt svg:hover {
     stroke: var(--medium-gray);
     fill: var(--medium-gray);
