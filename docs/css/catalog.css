@@ -326,7 +326,7 @@ option:hover {
     background-color: var(--black);
     color: var(--white);
 }
-  
+
 .filters form button:active {
     background-color: var(--black);
     color: var(--white);
@@ -352,6 +352,7 @@ option:hover {
     background-color: var(--light-gray);
     color: var(--black);
 }
+  
 
 .apply-filters-btn {
     background-color: var(--black) !important;
@@ -374,7 +375,7 @@ option:hover {
 }
 
 .card-one {
-    height: 480px !important;
+    height: 450px !important;
 }
 
 .catalog-img-wrapper {
@@ -398,6 +399,7 @@ option:hover {
     position: relative; 
     overflow: hidden;
     display: inline-block;
+    height: 360px !important;
 }
 
 .catalog-info {
@@ -477,25 +479,24 @@ option:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
-    gap: 140px;
+    margin-top: 10px; 
   }
   
 .price-group {
     display: flex;
-    flex-direction: column;
     align-items: flex-start; 
     white-space: nowrap; 
     min-width: 80px;
-    margin-top: 15px; 
+    gap: 10px;
   }
   
   .caption-row {
     text-decoration: none;
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.1px;
   }
   
   .old-price {
@@ -507,22 +508,33 @@ option:hover {
     letter-spacing: 0.2px;
     color: #888;
     text-decoration: line-through;
-    margin-bottom: -5px;
   }
   
   .basket-btn {
-    background: transparent;
-    border: none;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: 600;
+    color: var(--white) !important;
+    background-color: var(--orange) !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     cursor: pointer;
-    margin-top: 17px; 
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    position: relative;
   }
   
-  .basket-btn.active svg {
-    animation: pulse-animation 0.6s ease-out;
+  .basket-btn:hover {
+    background-color: var(--white) !important;
+    color: var(--orange) !important;
+    border: 1px solid var(--orange) !important;
   }
-
-  .heart-btn svg,
-  .basket-btn svg {
+  
+  .heart-btn svg {
     fill: transparent; 
     stroke: var(--black);
     stroke-width: 1.5;  
@@ -576,10 +588,9 @@ option:hover {
 }
 
 .info-block {
-  
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   
@@ -587,7 +598,7 @@ option:hover {
 .rating {
     display: flex;
     gap: 4px;
-    margin: -5px 0;
+    margin: 15px 0;
   }
   
   .star {
@@ -600,7 +611,7 @@ option:hover {
   }
   
   .star.filled {
-    color: var(--black); 
+    color: var(--orange); 
   }
   
 
@@ -803,26 +814,29 @@ option:hover {
 }
   
 .title-row {
+    font-size: 16px;
+    text-align: left; 
+    line-height: 1.1; 
+    letter-spacing: 0.2px;
+    color: var(--main-text-color);
+    font-family: var(--primary-font);
+    font-weight: 600;
+    margin-top: -5px;
+    text-transform: uppercase;
+}
+
+.title-p {
     font-size: 12px;
     text-align: left; 
     line-height: 1.1; 
     letter-spacing: 0.2px;
-    color: var(--main-text-color);
+    color: var(--dark-gray);
     font-family: var(--primary-font);
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 5px;
 }
   
-.caption-row {
-    font-size: 14px;
-    text-align: left; 
-    line-height: 1.1; 
-    letter-spacing: 0.2px;
-    color: var(--main-text-color);
-    font-family: var(--primary-font);
-    padding-top: 5px;
-    font-weight: 700;
-}
+
   
 .product-item button {
     display: block;
