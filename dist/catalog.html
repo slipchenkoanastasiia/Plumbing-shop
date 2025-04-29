@@ -105,6 +105,7 @@
           </div>
         </div>
           
+        <!-- Для фільтрів -->
           <script>document.addEventListener("DOMContentLoaded", function() {
     const filterButton = document.querySelector(".show-filters-btn");
     const sortContainer = document.querySelector(".sort");
@@ -126,7 +127,6 @@
 
 </script>
           
-
             <div class="content">
                 <div class="filters" id="filters">
                     <form>
@@ -226,91 +226,146 @@
               <div class="product-list-container">
                 <div class="product-list">
                     <div class="product-row">
-                      <div class="catalog-first">
-                        <div class="product-item">
-                          <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
-                            <use href="/icons.db4458ec.svg#arrow-right"></use>
-                          </svg>
-                      
-                          <div class="image-wrapper">
-                            <a href="/product.html">
-                              <img src="/prod1.fb0ffe0d.jpg" alt="Назва товару" width="236" height="368" loading="lazy">
-                            </a>
-                            <button class="heart-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                              </svg>
-                          </button>
-                          </div>
-                      
-                          <h3 class="title-row">Назва</h3>
-                          <div class="price-row">
-                            <p class="caption-row">Ціна</p>
-                            <button class="basket-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      
-                        <div class="product-item">
-                          <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
-                            <use href="/icons.db4458ec.svg#arrow-right"></use>
-                          </svg>
-                      
-                          <div class="image-wrapper">
-                            <img src="/prod2.f5dd8139.jpg" alt="#" width="236" height="368" loading="lazy">
-                            <button class="heart-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                              </svg>
-                          </button>
-                          </div>
-                      
-                          <h3 class="title-row">Назва</h3>
-                          <div class="price-row">
-                            <p class="caption-row">Ціна</p>
-                            <button class="basket-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      
-                        <div class="product-item">
-                          <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
-                            <use href="/icons.db4458ec.svg#arrow-right"></use>
-                          </svg>
-                      
-                          <div class="image-wrapper">
-                            <img src="/prod3.0c54c81c.jpg" alt="#" width="236" height="368" loading="lazy">
-                            <button class="heart-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
-                                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-                              </svg>
-                          </button>
-                          </div>
-                      
-                          <h3 class="title-row">Назва</h3>
-                          <div class="price-row">
-                            <p class="caption-row">Ціна</p>
-                            <button class="basket-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1"></circle>
-                                <circle cx="20" cy="21" r="1"></circle>
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      
+
+                     <div class="catalog-first">
+
+         <!-- Перший товар -->
+  <div class="product-item" data-id="prod1">
+    <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+      <use href="/icons.db4458ec.svg#arrow-right"></use>
+    </svg>
+
+    <div class="image-wrapper">
+      <a href="/product.html">
+        <img src="/prod1.fb0ffe0d.jpg" alt="Назва товару" width="236" height="368" loading="lazy" fetchpriority="low">
+      </a>
+      <button class="heart-btn" data-tooltip="цей товар залетить в 🤍">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+          2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+          C13.09 3.81 14.76 3 16.5 3
+          19.58 3 22 5.42 22 8.5
+          c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <h3 class="title-row">Назва</h3>
+
+    <div class="info-block">
+      <div class="rating" data-rating="0">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      <div class="price-row">
+        <div class="price-group">
+          <p class="old-price">1 500 грн</p>
+          <p class="caption-row">1 200 грн</p>
+        </div>
+        <button class="basket-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Другий товар -->
+  <div class="product-item" data-id="prod2">
+    <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+      <use href="/icons.db4458ec.svg#arrow-right"></use>
+    </svg>
+
+    <div class="image-wrapper">
+      <a href="/product.html">
+        <img src="/prod2.f5dd8139.jpg" alt="Назва товару" width="236" height="368" loading="lazy" fetchpriority="low">
+      </a>
+      <button class="heart-btn" data-tooltip="цей товар залетить в 🤍">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+          2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+          C13.09 3.81 14.76 3 16.5 3
+          19.58 3 22 5.42 22 8.5
+          c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <h3 class="title-row">Назва</h3>
+
+    <div class="info-block">
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star empty">★</span>
+        <span class="star empty">★</span>
+      </div>
+      <div class="price-row">
+        <p class="caption-row">Ціна</p>
+        <button class="basket-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Третій товар -->
+  <div class="product-item" data-id="prod3">
+    <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
+      <use href="/icons.db4458ec.svg#arrow-right"></use>
+    </svg>
+
+    <div class="image-wrapper">
+      <a href="/product.html">
+        <img src="/prod3.0c54c81c.jpg" alt="Назва товару" width="236" height="368" loading="lazy" fetchpriority="low">
+      </a>
+      <button class="heart-btn" data-tooltip="цей товар залетить в 🤍">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+          2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+          C13.09 3.81 14.76 3 16.5 3
+          19.58 3 22 5.42 22 8.5
+          c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <h3 class="title-row">Назва</h3>
+
+    <div class="info-block">
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star empty">★</span>
+        <span class="star empty">★</span>
+      </div>
+      <div class="price-row">
+        <p class="caption-row">Ціна</p>
+        <button class="basket-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="var(--black)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                                            
                       <div class="catalog-card card-one">
                         <div class="catalog-img-wrapper">
                             <img src="/new1.132e203f.jpg" alt="Товар 1" class="catalog-img">
@@ -322,7 +377,7 @@
                     </div>
                     
                       <div class="catalog-second">
-                        <div class="product-item">
+                        <div class="product-item" data-id="prod1">
                             <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
                                 <use href="/icons.db4458ec.svg#arrow-right"></use>
                             </svg>
@@ -345,7 +400,7 @@
                               </button>
                             </div>
                         </div>
-                        <div class="product-item">
+                        <div class="product-item" data-id="prod1">
                             <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
                                 <use href="/icons.db4458ec.svg#arrow-right"></use>
                             </svg>
@@ -368,7 +423,7 @@
                               </button>
                             </div>
                         </div>
-                        <div class="product-item">
+                        <div class="product-item" data-id="prod1">
                             <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
                                 <use href="/icons.db4458ec.svg#arrow-right"></use>
                             </svg>
@@ -423,7 +478,7 @@
                           </div>
                       </div>
                       
-                      <div class="product-item prod-therd">
+                      <div class="product-item prod-therd" data-id="prod1">
                           <svg class="svg-row" width="24" height="24" onclick="toggleColor(event)">
                               <use href="/icons.db4458ec.svg#arrow-right"></use>
                           </svg>
@@ -630,8 +685,8 @@ window.onload = function() {
   <script src="/catalog.5b2f169f.js"></script>
   <script src="/catalog.7e1e92aa.js"></script>
   <script src="/catalog.0c40964a.js"></script>
-  <script src="/catalog.96295a67.js"></script>
-  <script src="/catalog.1c96f4a9.js"></script>
+  <script src="/catalog.18487376.js"></script>
+  <script src="/catalog.759d53c9.js"></script>
 
 <script src="/catalog.e32e3231.js"></script></body>
 </html>
