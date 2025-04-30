@@ -360,9 +360,10 @@ option:hover {
     border-radius: 5px;
     border: 1px solid var(--black); 
     transition: background-color 0.3s, border-color 0.3s;
-    margin-top: 10px;
+    margin-top: 15px;
     font-weight: 500;
     font-size: 15px;
+    width: 100%;
 }
 
 .apply-filters-btn:hover {
@@ -839,6 +840,11 @@ option:hover {
     letter-spacing: 0.2px;
 }
 
+.catalog-text .star {
+    font-size: 26px;
+    margin-left: 6px;
+}
+
 .pagination-container {
     display: flex;
     flex-direction: column;
@@ -850,46 +856,28 @@ option:hover {
 .pagination {
     display: flex;
     flex-direction: inline; 
-    gap: 10px; 
+    gap: 5px; 
     align-items: center; 
 }
 
 .page-number {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
     cursor: pointer;
-    font-family: var(--main-font);
-    text-decoration: none;
-    color: var(--black);
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.2px;
 }
 
 .page-number:hover {
-    color: var(--medium-gray);
-}
-
-#show-more-btn {
-    width: auto;
-    padding: 12px 30px;
-    background-color: var(--black); 
-    color: var(--white); 
-    font-family: var(--main-font);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.2px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    border: none; 
-    border-radius: 5px;
-}
-
-#show-more-btn:hover {
-    background-color: var(--white);
+    background-color: var(--light-gray);
     color: var(--black);
-    border: 1px solid #000;
+    border-color: var(--light-gray);
+}
+
+.page-number.active {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 600;
 }
 
 .prev-page, .next-page {
