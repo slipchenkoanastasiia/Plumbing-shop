@@ -43,9 +43,7 @@
 }
 
 .cart-actions a {
-  color: var(--black);
-  background-color: var(--white);
-  border: 1px solid #000;
+  border: 1px solid var(--orange);
   border-radius: 5px;
   margin: 10px;
   padding: 10px 20px;
@@ -54,10 +52,13 @@
   text-decoration: none;
   transition: background-color .3s, border-color .3s;
   display: inline-block;
+  color: var(--white) !important;
+  background-color: var(--orange) !important;
 }
 
 .cart-actions a:hover {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--white) !important;
+  color: var(--orange) !important;
+  border: 1px solid var(--orange) !important;
 }
 /*# sourceMappingURL=index.31457977.css.map */

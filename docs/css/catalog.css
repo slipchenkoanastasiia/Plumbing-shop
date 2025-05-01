@@ -545,8 +545,8 @@ option:hover {
     font-size: 16px;
     text-align: left; 
     line-height: 1.1; 
-    letter-spacing: 0.2px;
-    color: var(--main-text-color);
+    letter-spacing: 0.3px;
+    color: var(--black);
     font-family: var(--primary-font);
     font-weight: 600;
     margin-top: -5px;
@@ -873,6 +873,7 @@ option:hover {
     color: var(--black);
     border-color: var(--light-gray);
 }
+
 
 .page-number.active {
     background-color: var(--black);

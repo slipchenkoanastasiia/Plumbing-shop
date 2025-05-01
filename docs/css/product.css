@@ -84,7 +84,7 @@
   font-weight: 700;
   line-height: 1.5; 
   letter-spacing: 0.2px;
-  color: var(--white);
+  color: var(--orange);
 }
 
 .product-articleg {
@@ -115,22 +115,28 @@
 
 .add-to-cartg {
   display: none;
-  background-color: var(--black);
-  color: var(--white);
+  padding: 10px 0;
+  font-size: 16px;
   font-family: var(--main-font);
+  font-weight: 600;
+  color: var(--white) !important;
+  background-color: var(--orange) !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5; 
-  letter-spacing: 0.2px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  width: 270px;
 }
 
 .add-to-cartg:hover {
-  background-color: var(--medium-gray);
+  background-color: var(--white) !important;
+  color: var(--orange) !important;
+  border: 1px solid var(--orange) !important;
 }
 
 .product-cardg:hover .product-overlay {
@@ -156,27 +162,25 @@
 }
 
 .thumbnail-image {
-  width: 30%;  
+  width: 30%;
   height: 40%;
   object-fit: cover;
-  border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.3s;
+  transition: transform 0.5s ease;
 }
 
 .thumbnail-image:hover {
-  border-color: black;
+  transform: scale(1.03); 
 }
-
 
 /* Характеристики та відгук */
 
 .product-details-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 160px; 
-  margin-top: 30px;
+  gap: 130px; 
+  margin-top: 10px;
   flex-wrap: wrap;
 }
 
@@ -193,10 +197,28 @@
 }
 
 .characteristic {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 60px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--light-gray);
 }
+
+.characteristic-label,
+.characteristic-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.characteristics-title {
+  font-family: var(--main-font);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
 
 .characteristic-label {
   font-size: 16px;
@@ -214,6 +236,7 @@
   color: var(--dark-gray);
   font-weight: 400;
   font-family: var(--main-font);
+  width: 150px;
 }
 
 /* Форма відгуку */
@@ -269,6 +292,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  width: 180px;
 }
 
 .review-form button:hover {
@@ -305,7 +329,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 6px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .related-item img {
@@ -368,7 +392,7 @@
   justify-content: center;
   width: 100%;
   max-width: 1200px;
-  margin: 5% auto;
+  margin: -5% auto;
   padding: 20px;
 }
 
