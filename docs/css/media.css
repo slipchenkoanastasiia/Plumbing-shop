@@ -7,6 +7,7 @@
   }
 
     /* Хедер */
+    
     .icons .icon:not(#icon) {
       display: none;
     }
@@ -31,6 +32,9 @@
       border: none;
       cursor: pointer;
       z-index: 1100;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
     }
   
     .burger span {
@@ -53,54 +57,9 @@
     }
 
     .header.scrolled {
-      background-color: var(--black);
-      color: var(--white);
-      padding: 15px 60px;
-      border-radius: 5px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      top: auto;
-      bottom: 20px;
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%); 
-      width: calc(100% - 40px);
-      height: 50px;
+      display: none;
     }
-    .header.scrolled .burger {
-      position: absolute;
-      left: 20px; 
-      top: 50%; 
-      transform: translateY(-50%); 
-      z-index: 10; 
-    }
-    
-    .header.scrolled .burger span {
-      background-color: var(--white); 
-    }
-    
-    .header.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    header.scrolled .menu a {
-      color: var(--white);
-    }
-    
-    .header.scrolled .menu a:hover {
-      color: var(--black); 
-      background-color: var(--light-gray);
-    }
-    
-    .header.scrolled .icons-scroll svg {
-      fill: var(--black);
-    }
-
-    .header.scrolled .cart-modal {
-      top: -50px !important;
-      right: 10px !important; 
-    }
+  
 
     .cart-modal {
       top: 50px !important;
@@ -129,7 +88,6 @@
     .header.scrolled nav.active {
       display: flex;
     }
-    
     
     .header.scrolled nav ul.menu {
       flex-direction: column;
@@ -169,73 +127,73 @@
       letter-spacing: 0.2px;
     }
     
-    /* Меню бургер */
+ /* Меню бургер */
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      height: 100%;
-      width: 250px;
-      background-color: var(--white);
-      padding-top: 80px;
-      transition: left 0.3s ease;
-      z-index: 999;
-    }
-  
-    nav.active {
-      left: 0;
-    }
-  
-    .menu {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 0 20px;
-    }
+ nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 250px;
+  background-color: var(--white);
+  padding-top: 80px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
 
-    .burger-socials {
-      display: block;
-      padding: 30px 35px;
-    }
+nav.active {
+  left: 0;
+}
 
-    .burger-socials .social-text {
-      font-family: var(--main-font);
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--black);
-      line-height: 1.2; 
-      letter-spacing: 0.2px;
-      margin: 16px 0 4px;
-      width: 120px;
-    }
-  
-    .burger-socials .social-icons {
-      display: flex;
-      gap: 16px;
-      margin: 16px 0 10px;
-    }
-  
-    .burger-socials .contact-text {
-      display: flex;
-      flex-direction: column; 
-      align-items: flex-start; 
-      font-family: var(--main-font);
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--black);
-      line-height: 1.3; 
-      letter-spacing: 0.2px;
-      margin-top: 40px;
-      gap: 12px;
-    }
+.menu {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 20px;
+}
 
-    .cart-modal {
-        top: 5px;
-        right: 105px;
-        padding: 10px 20px;
+.burger-socials {
+  display: block;
+  padding: 30px 35px;
+}
 
-      }
+.burger-socials .social-text {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.2; 
+  letter-spacing: 0.2px;
+  margin: 16px 0 4px;
+  width: 120px;
+}
+
+.burger-socials .social-icons {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0 10px;
+}
+
+.burger-socials .contact-text {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.3; 
+  letter-spacing: 0.2px;
+  margin-top: 40px;
+  gap: 12px;
+}
+
+.cart-modal {
+    top: 5px;
+    right: 105px;
+    padding: 10px 20px;
+
+  }
 
 /* Стилі для секції hero */
 .image-slider {
@@ -941,7 +899,7 @@
 
 .catalog-first .product-item .image-wrapper img {
   width: 100%; 
-  height: 340px; 
+  height: 320px; 
   object-fit: cover;
 }
 
@@ -976,15 +934,35 @@
   display: none; 
 }
 
-.heart-btn {
+.catalog-first {
+  margin-bottom: 20px !important;
+}
 
+.heart-btn {
   top: 5px !important;
   left: 60px !important;
 }
 
+.heart-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 40px; 
+  left: 13% !important;
+}
+
+.info-block {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px !important;
+}
+
+.title-row {
+  margin-top: 15px !important;
+}
+
 .basket-btn {
-  margin-left: 80px !important;
-  margin-top: 5px;  
+  margin-top: -5px !important;  
+  width: 100%;
 }
 
 .product-item {
@@ -1017,6 +995,13 @@
   margin-bottom: 15px; 
 }
 
+.product-item img {
+  width: 100%;
+  height: 330px !important;
+  object-fit: cover;
+  display: block;
+}
+
 .prod-therd {
   display: none;
 }
@@ -1026,7 +1011,7 @@
   align-items: center; 
   justify-content: center; 
   gap: 30px;
-  margin-top: -30px; 
+  margin-top: -200px; 
 }
 
 .catalog-left {
@@ -1072,6 +1057,14 @@
   display: flex;
   justify-content: center; 
   align-items: center;
+}
+
+.product-pag {
+  display: none;
+}
+
+.catalog-btn {
+  width: 60% !important;
 }
 
 /* Сторінка продукту */
@@ -1205,8 +1198,39 @@
   right: 40px !important;
 }
 
-.related-products {
-  margin-top: 20px !important;
+.characteristic {
+  gap: 30px !important;
+}
+
+.related-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 0 14px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.related-list::-webkit-scrollbar {
+  display: none;
+}
+
+.related-item {
+  flex: 0 0 auto;
+  width: 70%; /* або 250px — адаптивно під екран */
+  aspect-ratio: 3 / 4;
+  scroll-snap-align: start;
+}
+
+.related-products h3 {
+  font-size: 18px;
+  margin-left: 14px;
+}
+
+.related-item div {
+  font-size: 16px;
+  padding: 8px 12px;
 }
 
 /* Стилі для сторінки про нас */
