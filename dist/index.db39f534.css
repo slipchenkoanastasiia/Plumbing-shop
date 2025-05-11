@@ -383,18 +383,44 @@
   }
 
   .product-title {
-    font-family: var(--accent-font);
+    letter-spacing: .2px;
     color: var(--white);
-    margin: 0;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    text-decoration: none;
   }
 
   .product-price {
-    font-family: var(--accent-font);
+    color: var(--orange);
+    letter-spacing: .1px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .special-product-title {
+    letter-spacing: .2px;
     color: var(--white);
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .special-product-info .special-product-price {
+    color: var(--orange);
+    letter-spacing: .1px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: var(--primary-font);
+    text-decoration: none;
   }
 
   .button-container {
@@ -1040,6 +1066,10 @@
     font-size: 12px;
   }
 
+  .related-products {
+    margin-top: 30px !important;
+  }
+
   .add-to-cartg {
     width: 100%;
     padding: 12px;
@@ -1121,12 +1151,22 @@
     gap: 30px !important;
   }
 
+  .related-products {
+    margin-bottom: 20px;
+  }
+
+  .related-products h3 {
+    margin-left: 14px;
+    font-size: 18px;
+  }
+
   .related-list {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-direction: row;
     gap: 12px;
-    padding: 0 14px 10px;
+    padding: 10px 14px;
     display: flex;
     overflow-x: auto;
   }
@@ -1136,15 +1176,18 @@
   }
 
   .related-item {
-    aspect-ratio: 3 / 4;
     scroll-snap-align: start;
+    background: #f2f2f2;
+    border-radius: 8px;
     flex: none;
-    width: 70%;
+    width: 40%;
   }
 
-  .related-products h3 {
-    margin-left: 14px;
-    font-size: 18px;
+  .related-item img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    display: block;
   }
 
   .related-item div {
@@ -1419,22 +1462,6 @@
 
   .product-cardg {
     height: 410px !important;
-  }
-
-  .related-list {
-    justify-content: center !important;
-    gap: 14px !important;
-  }
-
-  .related-item {
-    aspect-ratio: 3 / 4 !important;
-    flex: 0 0 calc(33.33% - 10px) !important;
-    max-width: calc(33.33% - 10px) !important;
-  }
-
-  .related-item div {
-    padding: 8px 12px !important;
-    font-size: 18px !important;
   }
 
   .about {
