@@ -1095,6 +1095,10 @@ nav.active {
 
 /* Сторінка продукту */
 
+.product-reviews {
+  margin-bottom: 30px;
+}
+
 .product-details-wrapper {
   gap: 20px !important; 
   margin-top: 10px;
@@ -1175,8 +1179,11 @@ nav.active {
 .delivery-text {
   align-self: center;
   width: 100%;
-
   text-align: center !important; 
+}
+
+.delivery-container {
+  margin-top: 40px !important;
 }
 
 .delivery-container h2,
@@ -1192,11 +1199,13 @@ nav.active {
   font-size: 14px;
 }
 
-.related-list {
-  flex-direction: column;
-  align-items: stretch;
-  gap: 20px;
-}
+  .related-item {
+    max-width: calc(50% - 10px) !important;
+  }
+
+  .related-item3 {
+    display: none;
+  }
 
 .contact-info {
   flex-direction: column;
@@ -1214,34 +1223,15 @@ nav.active {
   gap: 30px !important;
 }
 
-.related-products {
-  margin-bottom: 20px;
-}
-
 .related-products h3 {
   font-size: 18px;
   margin-left: 14px;
 }
 
-.related-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: space-between;
-}
-
-.related-item {
-  width: calc(50% - 8px); /* 2 items per row */
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.related-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+  .product-characteristics {
+    max-width: 90%; 
+    margin: 0 auto;
+  }
 
 /* Стилі для сторінки про нас */
 .about {
@@ -1511,6 +1501,22 @@ padding: 0 40px !important;
     .prod-therd .title-row {
       margin-top: -30px;
     }
+
+    .heart-btn {
+    left: 80px !important;
+  }
+
+    .heart-btn::after {
+    left: 25% !important;
+  }
+
+  .title-row {
+    margin-top: 10px !important;
+}
+
+.info-block {
+    margin-top: -20px !important;
+  }
     
     /* Сторінка товару */
     
@@ -1521,6 +1527,8 @@ padding: 0 40px !important;
     .product-cardg {
       height: 410px !important; 
     }
+
+
 
        /* Сторінка про нас */
        .about {
@@ -1550,11 +1558,12 @@ margin-top: 180px !important;
       grid-column: span 1; 
   }
   
-  .delivery-cardd h3 {
-    font-size: 24px !important;
+  .delivery-cardd-top {
+        font-size: 24px !important;
     position: absolute; 
-    bottom: 10% !important;
-    left: 40%; 
-    transform: translateX(-50%);
+    left: 17%; 
+bottom: 190px;
+width: 50%;
+ 
   }
-  }
+}
