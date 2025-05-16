@@ -315,9 +315,10 @@ img {
 .text-overlay {
   color: var(--white);
   border-radius: 10px;
+  max-width: 600px;
   padding: 20px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 20%;
   transform: translateY(-50%);
 }

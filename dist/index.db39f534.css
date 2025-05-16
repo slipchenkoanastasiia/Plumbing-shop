@@ -1438,6 +1438,18 @@
     height: 410px !important;
   }
 
+  .product-details-wrapper {
+    padding: 20px;
+  }
+
+  .product-div {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    display: flex;
+  }
+
   .about {
     min-height: 75vh !important;
   }
