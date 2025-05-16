@@ -148,7 +148,7 @@ nav.active {
 .menu {
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 10px;
   padding: 0 20px;
 }
 
@@ -1269,7 +1269,7 @@ padding: 0 40px !important;
 
 .delivery-cardd {
   width: 100%;
-  height: 240px !important;
+  height: 130px !important;
 }
 
 .delivery-cardd:nth-child(5),
@@ -1279,10 +1279,15 @@ padding: 0 40px !important;
 
 .delivery-cardd h3 {
   font-size: 14px !important;
-  position: absolute; 
-  bottom: 10% !important;
-  left: 40%; 
-  transform: translateX(-50%);
+  position: absolute;
+  top: 10% !important;
+  left: 10%; /* або 14px, якщо хочеш як padding */
+  transform: none !important;
+  text-align: left;
+}
+
+.delivery-cardd p {
+  font-size: 10px !important;
 }
 
   /* Сторінка пошуку */
@@ -1518,7 +1523,7 @@ padding: 0 40px !important;
 }
 
 .info-block {
-    margin-top: -20px !important;
+    margin-top: -30px !important;
   }
     
  /* Сторінка товару */
@@ -1543,6 +1548,14 @@ padding: 0 40px !important;
   align-items: flex-start;
 }
 
+.info-top {
+  margin-bottom: 10px !important; 
+}
+
+.product-descriptiong {
+  margin-bottom: -10px !important;
+}
+
 /* Сторінка про нас */
 .about {
   min-height: 75vh !important;
@@ -1564,7 +1577,7 @@ margin-top: 180px !important;
   
 .delivery-cardd {
   width: 100%;
-  height: 340px !important;
+  height: 240px !important;
 }
   
 .delivery-cardd:nth-child(5),
