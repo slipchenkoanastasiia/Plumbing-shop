@@ -1328,4 +1328,10 @@ img {
   background-color: var(--medium-gray);
   color: var(--white);
 }
+
+.product-div {
+  justify-content: space-between;
+  gap: 100px;
+  display: flex;
+}
 /*# sourceMappingURL=index.8e376639.css.map */

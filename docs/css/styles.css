@@ -1347,3 +1347,9 @@ img {
   background-color: var(--medium-gray);
   color: var(--white);
 }
+
+  .product-div {
+    display: flex;
+      justify-content: space-between;
+      gap: 100px;
+  }
